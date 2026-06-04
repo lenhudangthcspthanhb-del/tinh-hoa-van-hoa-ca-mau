@@ -90,3 +90,22 @@ body {
   color: #14532d;
   border: 1px solid #86efac;
 }
+
+/* === Province Name Color Shift === */
+@keyframes colorShift {
+  0% { color: #ffffff; text-shadow: 0 0 8px rgba(255,255,255,0.3); }
+  20% { color: #fde68a; text-shadow: 0 0 12px rgba(253,230,138,0.5); }
+  40% { color: #67e8f9; text-shadow: 0 0 12px rgba(103,232,249,0.5); }
+  60% { color: #a78bfa; text-shadow: 0 0 12px rgba(167,139,250,0.5); }
+  80% { color: #f9a8d4; text-shadow: 0 0 12px rgba(249,168,212,0.5); }
+  100% { color: #ffffff; text-shadow: 0 0 8px rgba(255,255,255,0.3); }
+}
+
+.province-name {
+  transition: transform 0.3s ease;
+}
+
+.province-name:hover {
+  animation: colorShift 2s ease-in-out infinite;
+  transform: scale(1.05);
+}

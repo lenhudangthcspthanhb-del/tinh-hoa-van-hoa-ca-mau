@@ -15,6 +15,7 @@ import VuonQuocGiaUMinhHa from './pages/VuonQuocGiaUMinhHa'
 import LauMamUMinh from './pages/LauMamUMinh'
 import ChoNoiCaMau from './pages/ChoNoiCaMau'
 import ChuaMonivongsa from './pages/ChuaMonivongsa'
+import TinhCaMau from './pages/TinhCaMau'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/am-thuc/lau-mam-u-minh" element={<LauMamUMinh />} />
         <Route path="/dia-diem/cho-noi-ca-mau" element={<ChoNoiCaMau />} />
         <Route path="/di-tich/chua-monivongsa-bopharam" element={<ChuaMonivongsa />} />
+        <Route path="/tinh-thanh/ca-mau" element={<TinhCaMau />} />
       </Routes>
     </BrowserRouter>
   )

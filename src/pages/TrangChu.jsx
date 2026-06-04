@@ -1,8 +1,10 @@
+import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 export default function TrangChu() {
+  const scrollRef = useRef(null)
   return (
     <>
       <Navbar />
@@ -82,17 +84,27 @@ export default function TrangChu() {
         </section>
 
         {/* Featured Destinations */}
-        <section className="py-16 bg-[#f0fdf4]">
+        <section className="py-16 bg-[#f0fdf4] relative">
           <div className="px-4 md:px-10 lg:px-40 mb-10 flex flex-col md:flex-row justify-between items-end gap-6">
             <div>
               <h2 className="text-[#1a2e1a] text-3xl font-bold mb-2">Điểm đến nổi bật</h2>
               <p className="text-[#4b6351]">Những địa danh không thể bỏ qua khi đến Cà Mau</p>
             </div>
-            <Link to="/dia-diem" className="text-primary hover:text-[#15803d] flex items-center gap-2 text-sm font-bold transition-colors">
-              Xem tất cả <span className="material-symbols-outlined text-lg">arrow_forward</span>
-            </Link>
+            <div className="flex items-center gap-3">
+              <button onClick={() => scrollRef.current?.scrollBy({ left: -360, behavior: 'smooth' })}
+                className="w-10 h-10 rounded-full bg-white border border-green-200 shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                <span className="material-symbols-outlined">chevron_left</span>
+              </button>
+              <button onClick={() => scrollRef.current?.scrollBy({ left: 360, behavior: 'smooth' })}
+                className="w-10 h-10 rounded-full bg-white border border-green-200 shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                <span className="material-symbols-outlined">chevron_right</span>
+              </button>
+              <Link to="/dia-diem" className="text-primary hover:text-[#15803d] flex items-center gap-2 text-sm font-bold transition-colors ml-2">
+                Xem tất cả <span className="material-symbols-outlined text-lg">arrow_forward</span>
+              </Link>
+            </div>
           </div>
-          <div className="flex overflow-x-auto gap-6 px-4 md:px-10 lg:px-40 pb-8 snap-x" style={{ scrollbarWidth: 'none' }}>
+          <div ref={scrollRef} className="flex overflow-x-auto gap-6 px-4 md:px-10 lg:px-40 pb-8 snap-x scrollbar-hide" style={{ scrollbarWidth: 'none' }}>
             {[
               { img: 'https://ik.imagekit.io/tvlk/blog/2023/03/go-and-share-du-lich-mui-ca-mau-17.jpg', icon: 'park', cat: 'Du lịch sinh thái', name: 'Mũi Cà Mau', desc: 'Nơi duy nhất trên đất liền ngắm được cả mặt trời mọc ở biển Đông và lặn ở biển Tây.', to: '/dia-diem/mui-ca-mau' },
               { img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBYl-8of1zF9xfYqO35sHo5GTjPzdJna5EJ_17hanyZKkii-jnClOCIcHudLgC2OuHKBXB55qiZPOe9GeDBZTrD5jiKj4uvnzR3JdxtBk1LblYPGihxHZRJU0CbNZKGXuBpVkqly1aNSFN8F0-ONLtFVZNSD1VztnMyPI3pX-aAiqAzbGd31a-vy7htcmsZwW0K_4Te9QK8YMLuF3azPdBmN5WBVXhOt2VbP2awiK0QxU2xREVNYVy5_42nPL14wVB6nDaZ9ZgPfGY', icon: 'forest', cat: 'Rừng quốc gia', name: 'Rừng U Minh Hạ', desc: 'Khám phá hệ sinh thái đất ngập nước đặc trưng với rừng tràm bạt ngàn và các loài chim quý.', to: '/dia-diem/vuon-quoc-gia-u-minh-ha' },

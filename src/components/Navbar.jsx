@@ -86,7 +86,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-4 text-[#1a2e1a]">
           <LogoIcon />
           <h2 className="text-[#1a2e1a] text-lg font-bold leading-tight tracking-[-0.015em]">
-            Du lịch Cà Mau
+            Khám phá Cà Mau
           </h2>
         </Link>
 
@@ -121,9 +121,7 @@ export default function Navbar() {
             />
           </div>
         </label>
-        <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-white hover:bg-[#15803d] transition-colors duration-300 text-sm font-bold leading-normal tracking-[0.015em] shadow-md shadow-green-200">
-          <span className="truncate">Đặt tour</span>
-        </button>
+
       </div>
     </header>
   )

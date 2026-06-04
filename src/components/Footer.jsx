@@ -71,10 +71,10 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 text-white mb-6">
               <LogoIcon />
-              <h2 className="text-xl font-bold">Du lịch Cà Mau</h2>
+              <h2 className="text-xl font-bold">Khám phá Cà Mau</h2>
             </div>
             <p className="text-green-200 mb-6">
-              Cổng thông tin du lịch chính thức. Khám phá vẻ đẹp tận cùng đất nước, nơi thiên nhiên
+              Khám phá vẻ đẹp tận cùng đất nước, nơi thiên nhiên
               hòa quyện cùng bản sắc văn hóa độc đáo.
             </p>
             <div className="flex gap-4">

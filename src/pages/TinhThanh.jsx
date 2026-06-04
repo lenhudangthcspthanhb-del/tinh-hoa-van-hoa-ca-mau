@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 const DS = [
@@ -64,141 +65,128 @@ export default function TinhThanh() {
       <div className="pt-[72px]">
 
         {/* Search Bar */}
-        <div className="bg-white px-4 py-3 shadow border-b border-gray-200">
-          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-3">
-            <input
-              type="text"
-              placeholder="Nhập tên tỉnh thành hoặc phường xã, quận huyện cũ..."
-              value={query}
-              onChange={e => setQuery(e.target.value)}
-              className="flex-1 border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-blue-400"
-            />
-            <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-bold text-sm transition-colors">
-              <span className="material-symbols-outlined text-base">search</span> Tìm Kiếm
-            </button>
-            <select
-              value={loaiFilter}
-              onChange={e => setLoaiFilter(e.target.value)}
-              className="border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-blue-400 bg-white text-gray-600 min-w-[180px]"
-            >
-              <option value="all">Chọn tỉnh thành</option>
-              <option value="tinh">Tỉnh</option>
-              <option value="thanh-pho">Thành phố trực thuộc TW</option>
-            </select>
+        <div className="bg-white px-4 py-5 shadow border-b border-gray-200">
+          <div className="max-w-6xl mx-auto">
+            <p className="text-center text-2xl font-bold text-orange-500 mb-3">🔍 Tìm kiếm Tỉnh/Thành phố sáp nhập</p>
+            <div className="flex flex-col md:flex-row gap-3">
+              <input
+                type="text"
+                placeholder="Nhập tên tỉnh thành hoặc phường xã, quận huyện cũ..."
+                value={query}
+                onChange={e => setQuery(e.target.value)}
+                className="flex-1 border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-blue-400"
+              />
+              <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-bold text-sm transition-colors">
+                <span className="material-symbols-outlined text-base">search</span> Tìm Kiếm
+              </button>
+              <select
+                value={loaiFilter}
+                onChange={e => setLoaiFilter(e.target.value)}
+                className="border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-blue-400 bg-white text-gray-600 min-w-[180px]"
+              >
+                <option value="all">Chọn tỉnh thành</option>
+                <option value="tinh">Tỉnh</option>
+                <option value="thanh-pho">Thành phố trực thuộc TW</option>
+              </select>
+            </div>
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-4 py-6">
-          {/* Section header */}
-          <div className="text-center mb-4">
-            <h2 className="text-xl font-bold text-gray-800">Danh Sách Tỉnh Thành</h2>
-            <p className="text-gray-500 text-sm mt-1">Hiển thị {filtered.length} / {DS.length} tỉnh thành</p>
+        <div className="max-w-6xl mx-auto px-4 py-6">
+          <div className="text-center mb-5">
+            <h2 className="text-2xl font-extrabold text-orange-500">🏛️ Danh Sách Tỉnh Thành Sáp Nhập</h2>
+            <p className="text-gray-500">Hiển thị {filtered.length} / {DS.length} tỉnh thành</p>
           </div>
 
-          {/* Stats cards */}
+          {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
             {[
-              { label: 'Tổng số tỉnh thành', value: '34', icon: 'location_on', color: 'text-blue-500' },
-              { label: 'Tổng dân số', value: fmt(totalDS), icon: 'group', color: 'text-green-500' },
-              { label: 'Tổng diện tích', value: fmtDt(totalDT) + ' km²', icon: 'bar_chart', color: 'text-teal-500' },
-              { label: 'Thành phố trực thuộc', value: String(soTP), icon: 'apartment', color: 'text-orange-500' },
+              { label: 'Tổng tỉnh thành', value: '34', icon: 'location_on', bg: 'bg-blue-50', border: 'border-blue-200', ic: 'text-blue-500', vc: 'text-blue-700' },
+              { label: 'Tổng dân số', value: fmt(totalDS), icon: 'group', bg: 'bg-emerald-50', border: 'border-emerald-200', ic: 'text-emerald-500', vc: 'text-emerald-700' },
+              { label: 'Tổng diện tích', value: fmtDt(totalDT) + ' km²', icon: 'bar_chart', bg: 'bg-cyan-50', border: 'border-cyan-200', ic: 'text-cyan-500', vc: 'text-cyan-700' },
+              { label: 'TP trực thuộc TW', value: String(soTP), icon: 'apartment', bg: 'bg-amber-50', border: 'border-amber-200', ic: 'text-amber-500', vc: 'text-amber-700' },
             ].map(s => (
-              <div key={s.label} className="bg-green-200 rounded-xl p-4 shadow-sm border border-gray-50">
+              <div key={s.label} className={`${s.bg} rounded-xl p-4 shadow-sm border ${s.border}`}>
                 <div className="flex items-start justify-between">
                   <div>
-                    <p className="text-primary font-black text-xs mb-1">{s.label}</p>
-                    <p className="text-red-500 font-black text-lg leading-tight">{s.value}</p>
+                    <p className="text-gray-600 font-semibold text-xs mb-1">{s.label}</p>
+                    <p className={`${s.vc} font-extrabold text-lg`}>{s.value}</p>
                   </div>
-                  <span className={`material-symbols-outlined text-2xl ${s.color}`}>{s.icon}</span>
+                  <span className={`material-symbols-outlined text-2xl ${s.ic}`}>{s.icon}</span>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Province cards grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Horizontal Cards */}
+          <div className="flex flex-col gap-4">
             {filtered.map(p => {
               const isTP = p.loai === 'thanh-pho'
-              const headerBg = isTP ? 'from-orange-400 to-orange-400' : 'from-green-500 to-green-500'
-              const badgeBg = isTP ? 'bg-blue-400 text-white' : 'bg-blue-400 text-white'
-              const tenPrefix = isTP ? 'Thành phố' : 'Tỉnh'
+              const tongDV = Number(p.phuong || 0) + Number(p.xa || 0) + Number(p.dkhu || 0)
+              const link = p.ten === 'Cà Mau' ? '/tinh-thanh/ca-mau' : null
+              const Wrapper = link ? Link : 'div'
+              const wrapperProps = link ? { to: link } : {}
               return (
-                <div key={p.stt} className="bg-green-200 rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                  {/* Card Header */}
-                  <div className={`bg-gradient-to-r ${headerBg} px-4 py-3`}>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="text-white font-bold text-2xl flex items-center gap-1">
-                          <span className="material-symbols-outlined text-2xl">{isTP ? 'apartment' : 'location_on'}</span>
-                          {tenPrefix} {p.ten}
-                        </h3>
-                        <p className="text-primary-500 text-sx mt-0.5">Sáp Nhập từ: {p.sapNhap}</p>
+                <Wrapper {...wrapperProps} key={p.stt} className={`block rounded-2xl overflow-hidden shadow-md border-2 hover:shadow-xl transition-all duration-300 ${isTP ? 'border-amber-300 bg-white' : 'border-emerald-300 bg-white'} ${link ? 'cursor-pointer ring-0 hover:ring-2 hover:ring-emerald-400' : ''}`}>
+                  <div className="flex flex-col md:flex-row">
+                    {/* Left: Icon + Name */}
+                    <div className={`flex flex-col items-center justify-center px-6 py-5 min-w-[180px] ${isTP ? 'bg-gradient-to-br from-amber-400 via-orange-400 to-red-400' : 'bg-gradient-to-br from-emerald-400 via-green-500 to-teal-500'}`}>
+                      <span className="material-symbols-outlined text-white text-5xl mb-2">{isTP ? 'apartment' : 'forest'}</span>
+                      <span className={`text-xs font-bold px-3 py-0.5 rounded-full mb-1 ${isTP ? 'bg-amber-200 text-amber-800' : 'bg-emerald-200 text-emerald-800'}`}>{isTP ? 'THÀNH PHỐ' : 'TỈNH'}</span>
+                      <h3 className="province-name text-white font-extrabold text-xl text-center leading-tight cursor-default">{p.ten}</h3>
+                      <span className="text-white/80 text-xs mt-1 font-semibold">#{p.stt}</span>
+                    </div>
+
+                    {/* Right: Info */}
+                    <div className="flex-1 p-4">
+                      {/* Row 1: 4 stats */}
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
+                        <div className="flex items-center gap-2">
+                          <span className={`material-symbols-outlined text-xl ${isTP ? 'text-amber-500' : 'text-emerald-500'}`}>group</span>
+                          <div><p className="text-[10px] text-gray-400 font-semibold uppercase">Dân số</p><p className="font-bold text-sm text-gray-800">{fmt(p.ds)}</p></div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className={`material-symbols-outlined text-xl ${isTP ? 'text-amber-500' : 'text-emerald-500'}`}>square_foot</span>
+                          <div><p className="text-[10px] text-gray-400 font-semibold uppercase">Diện tích</p><p className="font-bold text-sm text-gray-800">{fmtDt(p.dt)} km²</p></div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className={`material-symbols-outlined text-xl ${isTP ? 'text-amber-500' : 'text-emerald-500'}`}>tag</span>
+                          <div><p className="text-[10px] text-gray-400 font-semibold uppercase">Mã tỉnh</p><p className="font-bold text-sm text-gray-800">{p.ma}</p></div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className={`material-symbols-outlined text-xl ${isTP ? 'text-amber-500' : 'text-emerald-500'}`}>phone</span>
+                          <div><p className="text-[10px] text-gray-400 font-semibold uppercase">Mã vùng</p><p className="font-bold text-sm text-gray-800">{p.mvung}</p></div>
+                        </div>
                       </div>
-                      <span className={`${badgeBg} rounded-full px-2 py-0.5 text-xs font-black`}>#{p.stt}</span>
+
+                      {/* Row 2: Detail info */}
+                      <div className={`grid grid-cols-1 md:grid-cols-3 gap-2 mb-3 p-3 rounded-xl ${isTP ? 'bg-amber-50' : 'bg-emerald-50'}`}>
+                        <div className="flex items-start gap-1.5 text-xs text-gray-700">
+                          <span className={`material-symbols-outlined text-lg ${isTP ? 'text-amber-500' : 'text-emerald-500'}`}>merge</span>
+                          <span><strong>Đơn vị sáp nhập:</strong><br />{p.sapNhap}</span>
+                        </div>
+                        <div className="flex items-start gap-1.5 text-xs text-gray-700">
+                          <span className={`material-symbols-outlined text-lg ${isTP ? 'text-amber-500' : 'text-emerald-500'}`}>account_balance</span>
+                          <span><strong>Trung tâm Hành Chính:</strong><br />{p.trungTam}</span>
+                        </div>
+                        <div className="flex items-start gap-1.5 text-xs text-gray-700">
+                          <span className={`material-symbols-outlined text-lg ${isTP ? 'text-amber-500' : 'text-emerald-500'}`}>terrain</span>
+                          <span><strong>Vùng kinh tế:</strong><br />{p.vung}</span>
+                        </div>
+                      </div>
+
+                      {/* Row 3: Administrative units */}
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="material-symbols-outlined text-gray-400 text-base">corporate_fare</span>
+                        <span className="text-xs font-semibold text-gray-500">Đơn vị Hành chính:</span>
+                        <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${isTP ? 'bg-orange-500 text-white border border-amber-300' : 'bg-orange-500 text-white border border-orange-300'}`}>Tổng: {tongDV}</span>
+                        <span className="bg-blue-500 text-white border border-blue-300 text-xs font-bold px-2.5 py-0.5 rounded-full">{p.phuong} Phường</span>
+                        <span className="bg-green-500 text-white border border-green-300 text-xs font-bold px-2.5 py-0.5 rounded-full">{p.xa} Xã</span>
+                        {p.dkhu && <span className="bg-rose-500 text-white border border-rose-300 text-xs font-bold px-2.5 py-0.5 rounded-full">{p.dkhu} Đặc khu</span>}
+                      </div>
                     </div>
                   </div>
-
-                  {/* Card Body */}
-                  <div className="p-4">
-                    <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-3">
-                      <div className="flex items-center gap-1 text-xs">
-                        <span className="material-symbols-outlined text-blue-400 text-xl">group</span>
-                        <div>
-                          <span className="text-primary-500 text-xs block">Dân số</span>
-                          <span className="font-bold text-green-500">{fmt(p.ds)}</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-1 text-xs">
-                        <span className="material-symbols-outlined text-green-400 text-xl">square_foot</span>
-                        <div>
-                          <span className="text-primary-500 text-xs block">Diện tích</span>
-                          <span className="font-bold text-green-500">{fmtDt(p.dt)}</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-1 text-sm">
-                        <span className="material-symbols-outlined text-orange-400 text-xl">tag</span>
-                        <div>
-                          <span className="text-primary-500 text-xs block">Mã tỉnh</span>
-                          <span className="font-bold text-green-500">{p.ma}</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-1 text-xs">
-                        <span className="material-symbols-outlined text-purple-400 text-xl">phone</span>
-                        <div>
-                          <span className="text-primary-500 text-xs block">Mã vùng</span>
-                          <span className="font-bold text-green-500">{p.mvung}</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="space-y-1.5 mb-3 border-t border-gray-100 pt-2">
-                      <div className="flex items-start gap-1.5 text-xs text-gray-600">
-                        <span className="material-symbols-outlined text-green-500 text-xl mt-0.5">merge</span>
-                        <span><span className="font-semibold">Đơn vị sáp nhập:</span> {p.sapNhap}</span>
-                      </div>
-                      <div className="flex items-start gap-1.5 text-xs text-gray-600">
-                        <span className="material-symbols-outlined text-green-500 text-xl mt-0.5">account_balance</span>
-                        <span><span className="font-semibold">Trung tâm hành chính:</span> {p.trungTam}</span>
-                      </div>
-                      <div className="flex items-start gap-1.5 text-xs text-gray-600">
-                        <span className="material-symbols-outlined text-green-500 text-xl mt-0.5">terrain</span>
-                        <span><span className="font-semibold">Vùng kinh tế:</span> {p.vung}</span>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center justify-between border-t border-gray-100 pt-2">
-                      <div className="flex items-center gap-1.5 flex-wrap">
-                        <span className="material-symbols-outlined text-gray-400 text-sm">corporate_fare</span>
-                        <span className="bg-blue-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">{p.phuong} Phường</span>
-                        <span className="bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">{p.xa} Xã</span>
-                        {p.dkhu > 0 && <span className="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">{p.dkhu} đặc khu</span>}
-                      </div>
-                      <button className={`flex items-center gap-1 text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors ${isTP ? 'bg-orange-500 hover:bg-orange-600' : 'bg-blue-600 hover:bg-blue-700'}`}>
-                        Xem Chi Tiết <span className="material-symbols-outlined text-xs">arrow_forward</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                </Wrapper>
               )
             })}
           </div>
