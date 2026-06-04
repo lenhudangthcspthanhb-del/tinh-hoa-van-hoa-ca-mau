@@ -19,7 +19,7 @@ import TinhCaMau from './pages/TinhCaMau'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<TrangChu />} />
         <Route path="/am-thuc" element={<AmThuc />} />
