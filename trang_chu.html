@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Trang chủ Du lịch Cà Mau</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#46ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#152211",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#152211] dark:text-white">
+    <!-- Top Navbar -->
+    <header
+        class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#2c4823]/30 bg-background-dark/80 backdrop-blur-md px-4 py-3 md:px-10">
+        <div class="flex items-center gap-4 md:gap-8">
+            <div class="flex items-center gap-4 text-white">
+                <div class="size-8 text-primary">
+                    <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_6_543)">
+                            <path
+                                d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z"
+                                fill="currentColor"></path>
+                            <path clip-rule="evenodd"
+                                d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z"
+                                fill="currentColor" fill-rule="evenodd"></path>
+                        </g>
+                        <defs>
+                            <clippath id="clip0_6_543">
+                                <rect fill="white" height="48" width="48"></rect>
+                            </clippath>
+                        </defs>
+                    </svg>
+                </div>
+                <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Du lịch Cà Mau</h2>
+            </div>
+            <nav class="hidden items-center gap-9 lg:flex">
+                <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                    href="#">Tổng quan</a>
+                <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                    href="#">Ẩm thực</a>
+                <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                    href="#">Điểm đến</a>
+                <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                    href="#">Di tích</a>
+                <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                    href="#">Làng nghề</a>
+            </nav>
+        </div>
+        <div class="flex flex-1 justify-end gap-4 lg:gap-8">
+            <label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+                <div
+                    class="flex w-full flex-1 items-stretch rounded-full h-full bg-[#2c4823]/50 border border-[#46ec13]/20 focus-within:border-primary focus-within:bg-[#2c4823]">
+                    <div
+                        class="text-[#9fc992] flex border-none items-center justify-center pl-4 rounded-l-full border-r-0">
+                        <span class="material-symbols-outlined text-xl">search</span>
+                    </div>
+                    <input
+                        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-white focus:outline-0 focus:ring-0 border-none bg-transparent focus:border-none h-full placeholder:text-[#9fc992]/60 px-4 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal"
+                        placeholder="Tìm kiếm..." value="" />
+                </div>
+            </label>
+            <button
+                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-[#152211] hover:bg-white transition-colors duration-300 text-sm font-bold leading-normal tracking-[0.015em]">
+                <span class="truncate">Đặt tour</span>
+            </button>
+        </div>
+    </header>
+    <main class="flex flex-col w-full min-h-screen">
+        <!-- Hero Section -->
+        <section class="relative w-full h-[600px] md:h-[700px] overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img alt="Aerial view of lush green mangrove forest and winding rivers in Ca Mau"
+                    class="w-full h-full object-cover"
+                    data-alt="Aerial view of lush green mangrove forest and winding rivers in Ca Mau"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5f_O_0pUdikEmL-oGYo1kkhelFPpehKK6DFWJjWk01_teS7NoPUcXVWB0ZIT7AMoRikMMsjGqEEcjBZo-aOck2rZfeFPsjintRhHcJNRq6uD3fLjuKnh9tDdi7jCDTKmI1F5grT4EuC6lm8Dfm7vdNWcL5EWCI1bHfoyWS_5GUebnm1laCWE1ya8RXMLjY3W7OG3K96WKnjNPVQNj_AvvWTJZ3ORgu1JV2wa0U8pG6fjb0nSmETrXK_jTjmxdbHrBbRvu8PUvV4M" />
+                <div class="absolute inset-0 bg-gradient-to-b from-[#152211]/30 via-[#152211]/50 to-[#152211]"></div>
+            </div>
+            <!-- Content -->
+            <div
+                class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 max-w-5xl mx-auto">
+                <h1
+                    class="text-white text-4xl md:text-6xl lg:text-7xl font-black leading-tight tracking-[-0.033em] drop-shadow-lg mb-6">
+                    Khám phá Đất Mũi Cà Mau <br /> <span class="text-primary">Hồn thiêng sông nước</span>
+                </h1>
+                <p
+                    class="text-gray-200 text-base md:text-lg font-medium leading-relaxed max-w-2xl mb-10 drop-shadow-md">
+                    Trải nghiệm vẻ đẹp hoang sơ của rừng ngập mặn, nền văn hóa đậm đà bản sắc phương Nam và con người
+                    hào sảng nơi tận cùng Tổ quốc.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button
+                        class="flex items-center justify-center rounded-full h-12 px-8 bg-primary hover:bg-white text-[#152211] text-base font-bold transition-all duration-300 transform hover:scale-105 shadow-lg shadow-primary/20">
+                        Bắt đầu hành trình
+                    </button>
+                    <button
+                        class="flex items-center justify-center rounded-full h-12 px-8 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white text-base font-bold transition-all duration-300">
+                        <span class="material-symbols-outlined mr-2">play_circle</span>
+                        Xem video
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Intro Section -->
+        <section class="py-16 md:py-24 px-4 md:px-20 lg:px-40 bg-background-dark relative overflow-hidden">
+            <div
+                class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none">
+            </div>
+            <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider">
+                        <span class="size-2 rounded-full bg-primary"></span>
+                        Tổng quan
+                    </div>
+                    <h2 class="text-white text-3xl md:text-4xl font-bold leading-tight">Vùng đất tận cùng <br />phía Nam
+                        Tổ quốc</h2>
+                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">
+                        Cà Mau là mảnh đất thiêng liêng nơi đầu sóng ngọn gió, nổi tiếng với hệ sinh thái rừng ngập mặn
+                        đa dạng, Khu dự trữ sinh quyển thế giới và sự giao thoa văn hóa độc đáo giữa ba dân tộc Kinh -
+                        Hoa - Khmer. Nơi đây không chỉ có thiên nhiên hùng vĩ mà còn thấm đẫm tình người phóng khoáng.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div>
+                            <h3 class="text-primary text-3xl font-bold">300+</h3>
+                            <p class="text-gray-400 text-sm">Loài động vật quý hiếm</p>
+                        </div>
+                        <div>
+                            <h3 class="text-primary text-3xl font-bold">254km</h3>
+                            <p class="text-gray-400 text-sm">Đường bờ biển bao quanh</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-2 bg-gradient-to-r from-primary to-[#2c4823] rounded-[2rem] opacity-20 blur-lg group-hover:opacity-40 transition duration-500">
+                    </div>
+                    <img alt="Map or abstract representation of Ca Mau geography"
+                        class="relative w-full h-[400px] object-cover rounded-[2rem] shadow-2xl"
+                        data-alt="Wooden boat on a river in Ca Mau during sunset" data-location="Cà Mau"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfOgMCi9oBz6ZheqTctuYlr6DU5au2ZbXg-K-sSjsuQ04qV5t46P9B7pn0MYI3wcrWLlZIhw5zUqzzGQrsFMaiLTmpaTKfv3KUwSXxXetymrhcfQ1bOdyR16CkBgnBvF7Xed8SlSTd3G7GWisX2YBN7xvQEj2n0ChTVVlijYn6nD1EJmKmlUur_eM1ToWuTZmYiezCP-Y0FsGNl7qVqOlDhwa7xqSOEc5T-rEvJSm7szNwxsoas8QzBOs57sqESSG_b4r8xWws08k" />
+                    <!-- Floating Card -->
+                    <div
+                        class="absolute -bottom-6 -left-6 bg-[#1a2c15] p-4 rounded-2xl border border-white/10 shadow-xl hidden md:block">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-primary/20 p-2 rounded-full text-primary">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-bold">Mũi Cà Mau</p>
+                                <p class="text-gray-400 text-xs">Điểm cực Nam</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Destinations (Horizontal Scroll) -->
+        <section class="py-16 bg-[#0f1a0c]">
+            <div class="px-4 md:px-10 lg:px-40 mb-10 flex flex-col md:flex-row justify-between items-end gap-6">
+                <div>
+                    <h2 class="text-white text-3xl font-bold mb-2">Điểm đến nổi bật</h2>
+                    <p class="text-gray-400">Những địa danh không thể bỏ qua khi đến Cà Mau</p>
+                </div>
+                <button
+                    class="text-primary hover:text-white flex items-center gap-2 text-sm font-bold transition-colors">
+                    Xem tất cả <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                </button>
+            </div>
+            <!-- Cards Slider -->
+            <div class="flex overflow-x-auto gap-6 px-4 md:px-10 lg:px-40 pb-8 scrollbar-hide snap-x">
+                <!-- Card 1 -->
+                <div
+                    class="min-w-[280px] md:min-w-[340px] snap-center group relative h-[420px] rounded-xl overflow-hidden cursor-pointer">
+                    <img alt="Mui Ca Mau landmark monument against blue sky"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Mui Ca Mau landmark monument against blue sky"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB07Al0uI3I5FGxGp8QSCTGS8RcuneX-Nhc51NrQswjWWluSpLos1tI9OyV56bJE_LlV52HjswrsuFSDXSc71bx3qsbp8G5uBC_t8H7vjqcJo9f1Ip8M9Jl2t8XNGHaSDOKd2BHPLRhc-TlT6516u4jio4xDItcCnGUKVL6vz0TXZZ3pcIdobvEQsFxL96u0RDuI5wdiwC9DwQbUyHNXeBadXv_hYiwtHPHJYfwSRZo8TPMv9vOrLNmGEqn2Syg0IJxd3_6G-oz5iY" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <div class="flex items-center gap-2 text-primary text-xs font-bold uppercase mb-2">
+                            <span class="material-symbols-outlined text-base">park</span>
+                            Du lịch sinh thái
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-2">Mũi Cà Mau</h3>
+                        <p
+                            class="text-gray-300 text-sm line-clamp-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Nơi duy nhất trên đất liền ngắm được cả mặt trời mọc ở biển Đông và lặn ở biển Tây.
+                        </p>
+                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-[#152211]">
+                            <span class="material-symbols-outlined text-lg">arrow_outward</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="min-w-[280px] md:min-w-[340px] snap-center group relative h-[420px] rounded-xl overflow-hidden cursor-pointer">
+                    <img alt="Green forest canopy of U Minh Ha National Park"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Green forest canopy of U Minh Ha National Park"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYl-8of1zF9xfYqO35sHo5GTjPzdJna5EJ_17hanyZKkii-jnClOCIcHudLgC2OuHKBXB55qiZPOe9GeDBZTrD5jiKj4uvnzR3JdxtBk1LblYPGihxHZRJU0CbNZKGXuBpVkqly1aNSFN8F0-ONLtFVZNSD1VztnMyPI3pX-aAiqAzbGd31a-vy7htcmsZwW0K_4Te9QK8YMLuF3azPdBmN5WBVXhOt2VbP2awiK0QxU2xREVNYVy5_42nPL14wVB6nDaZ9ZgPfGY" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <div class="flex items-center gap-2 text-primary text-xs font-bold uppercase mb-2">
+                            <span class="material-symbols-outlined text-base">forest</span>
+                            Rừng quốc gia
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-2">Rừng U Minh Hạ</h3>
+                        <p
+                            class="text-gray-300 text-sm line-clamp-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Khám phá hệ sinh thái đất ngập nước đặc trưng với rừng tràm bạt ngàn và các loài chim quý.
+                        </p>
+                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-[#152211]">
+                            <span class="material-symbols-outlined text-lg">arrow_outward</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="min-w-[280px] md:min-w-[340px] snap-center group relative h-[420px] rounded-xl overflow-hidden cursor-pointer">
+                    <img alt="Traditional floating market scene on river"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Traditional floating market scene on river"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAQkTiAFG2IhvznW34XyjTrZNGZXkE6eO6Oh1OzR_NZCmDSc4V-_Bv3Et4SmLGZIVNG8egqjrMZjIB1835lUgOW8KDHbT4aRbm6sW7Ljg6J0bmpW5QaXNDTG6wfOCleJT9hWA4JN5h6laHhbDYhjhw0x9M8gA3aPuBRvafrAUDpOWo5nBTWIw6-5X5pFzff1L2P4cSDDDuQ0G4GEMwSsB6ztqBTRlHudDpekihkShCEaLgdPytSWAQrxwmcyOlUZdmwH_rgYU_0RQ" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <div class="flex items-center gap-2 text-primary text-xs font-bold uppercase mb-2">
+                            <span class="material-symbols-outlined text-base">storefront</span>
+                            Văn hóa
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-2">Chợ Nổi Cà Mau</h3>
+                        <p
+                            class="text-gray-300 text-sm line-clamp-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Trải nghiệm nét văn hóa giao thương độc đáo trên sông nước của người dân miền Tây Nam Bộ.
+                        </p>
+                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-[#152211]">
+                            <span class="material-symbols-outlined text-lg">arrow_outward</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="min-w-[280px] md:min-w-[340px] snap-center group relative h-[420px] rounded-xl overflow-hidden cursor-pointer">
+                    <img alt="Sanctuary entrance with peaceful garden"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Sanctuary entrance with peaceful garden"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfWWhvHpn5pWmMTUFlZpk_8XvkZCmgOgRiRf2geNabvNtob9ZL_DeydbIpsZVlTMkBA6GvDFJiNgdtNlv84Aqkd-rbZGSZNhrJLjlKsQDj1mWH7Tk_dQrhL78nzp9qQocSwH1EqYEaFB1z9qB-tKgnSk138uWgRLgaBdR5neSdDxRqmEHcKl4OntcRVBdS9bhZRRLo9fSVGFLwoKrNcB8uig4okv6WBZemoXy5tV5PAYDecpGqflXkKQWeif8Hf8iJ08LHg0GVnxM" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <div class="flex items-center gap-2 text-primary text-xs font-bold uppercase mb-2">
+                            <span class="material-symbols-outlined text-base">temple_buddhist</span>
+                            Tâm linh
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-2">Chùa Monivongsa Bopharam</h3>
+                        <p
+                            class="text-gray-300 text-sm line-clamp-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Ngôi chùa Khmer lớn nhất trung tâm thành phố với kiến trúc Angkor độc đáo và rực rỡ.
+                        </p>
+                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-[#152211]">
+                            <span class="material-symbols-outlined text-lg">arrow_outward</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Cuisine Section (Grid) -->
+        <section class="py-16 px-4 md:px-20 lg:px-40 bg-background-dark">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-white text-3xl md:text-4xl font-bold mb-4">Hương vị Đất Mũi</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Ẩm thực Cà Mau mang đậm hương vị của rừng và biển, dân dã
+                        nhưng đậm đà khó quên.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Feature Dish -->
+                    <div class="md:col-span-2 relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden group">
+                        <img alt="Fresh red crab dish served on a plate"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="Fresh red crab dish served on a plate"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNF3ccFrtCd06uED1x2yivL6X7v4R6h-ajoZvUK9oSEHnXtPNiiQOilYqfrm5g7713sJW6YhVivoIYeE3UfagaCY2PV7NK_NIiSu5rw8NHIn31HFjhTecAHWc4PVrEFq6OUC7SYR9345ca4Vpcl7XpZiV6cz6-9fD5ZH5acjPN6k9SO1uWwc91jN8VB3k3hrVMYJDAyLanetV4mQ-Eqhf4DEfigzk25oFm1svmHGIU5SmQ7C8eR29vPa1UEXEsUb5TEbiFlRVjBG8" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-white text-2xl font-bold">Cua Cà Mau</h3>
+                            <p class="text-gray-300 text-sm mt-2">Nổi tiếng nhất Việt Nam với thịt chắc, ngọt và gạch
+                                béo ngậy.</p>
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-[#152211] text-xs font-bold px-3 py-1 rounded-full">
+                            Đặc sản số 1</div>
+                    </div>
+                    <!-- Side Dish 1 -->
+                    <div class="relative h-[300px] md:h-auto rounded-2xl overflow-hidden group">
+                        <img alt="Hot pot with fish and vegetables"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="Hot pot with fish and vegetables"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhEbwhICdVm_jJJIim5tijsNhDjJT0xVUBUlIGnzJU8kpZXALJrvcfw1N_mb_u9_FDdOpiHuPA_Lox0Na_7pxRcZ559p75WIOmtiDjZRM19vn7ZVHe6F9pW3o_lrpdlxGoi9Xu41j1fY8NYZjSWM6cWh2gsa1mjl9Hg3F7hUaFUPKxLMQX6XFoXFg2CXWSYjQQQ3IFZ49PX-ezCEHWruC-aP5yxKK4Y8mQ8g5SWGUc86kN2FgVUILupbQnstikSEy27g8BPfBA80g" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-white text-xl font-bold">Lẩu mắm U Minh</h3>
+                            <p class="text-gray-300 text-sm mt-1">Hương vị đồng quê đậm đà.</p>
+                        </div>
+                    </div>
+                    <!-- Side Dish 2 -->
+                    <div class="relative h-[250px] rounded-2xl overflow-hidden group">
+                        <img alt="Grilled fish wrapped in leaves"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="Grilled fish wrapped in leaves"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCauXSjSrN7GPGPm3U0uTmul_N36fYAKVCK7vIUVwbKohrb2r0g59NSbMxV70NHJZkSV-c1N3dtGghUJzuG_s3aEpYQ6lZXlSmdy7ummXdxQNRJ-jYHjpfDEC3LMgRE0EWLk4utXUoFNyDQdvFi_iz7LW1rLM98XfEbL_cehi-W2RQMMv6cj6Xki1gRwsGRqyAC8rXtLe9N2y3jRkffDtZJ1H4SB-x_MVzFFXRd7LVEVqlMVseN8IT6eTU4HGCoO--92DZuFzRUpnU" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-white text-xl font-bold">Cá lóc nướng trui</h3>
+                        </div>
+                    </div>
+                    <!-- Side Dish 3 -->
+                    <div class="md:col-span-2 relative h-[250px] rounded-2xl overflow-hidden group">
+                        <div
+                            class="absolute inset-0 bg-[#2c4823] flex items-center justify-center group-hover:bg-[#3d6330] transition-colors">
+                            <div class="text-center p-8">
+                                <span
+                                    class="material-symbols-outlined text-primary text-5xl mb-4">restaurant_menu</span>
+                                <h3 class="text-white text-xl font-bold">Khám phá ẩm thực địa phương</h3>
+                                <p class="text-gray-300 text-sm mt-2 mb-6 max-w-sm mx-auto">Hơn 50 món ăn đặc sản đang
+                                    chờ bạn thưởng thức từ hải sản tươi sống đến các món mắm trứ danh.</p>
+                                <button
+                                    class="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-[#152211] font-bold text-sm transition-all">Xem
+                                    thực đơn</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- History & Crafts Split Section -->
+        <section class="py-16 bg-[#0f1a0c]">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-10 lg:px-40">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- History Column -->
+                    <div class="flex flex-col gap-6">
+                        <h2 class="text-white text-3xl font-bold flex items-center gap-3">
+                            <span
+                                class="p-2 bg-primary/10 rounded-full text-primary material-symbols-outlined">history_edu</span>
+                            Di tích &amp; Lịch sử
+                        </h2>
+                        <div
+                            class="bg-[#1a2c15] p-6 rounded-3xl border border-white/5 hover:border-primary/30 transition-colors">
+                            <div class="flex flex-col sm:flex-row gap-6">
+                                <img alt="Old colonial building architecture"
+                                    class="w-full sm:w-32 h-32 rounded-2xl object-cover shrink-0"
+                                    data-alt="Old colonial building architecture"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ287MMpjopDNwnUdGW0HgVH97S9a2iBVJ4KegRXqXRBhHAgClhUR3rRLpNrNsEU0C6mOs6RK2axXfOxTd-YBcU3WAympE61IyVoxdzSZRTaKWLLG9tAsKRseOp-SWmUEP5FhCwlLIIKsFPirvX6u5Tz4JqswnGi-Jsdbkt3Do1bc-lPygHFASLZkg_LiDbzG-WtcaWZDuc9DSHP6lEpPO1M6CijpmrLi-YAoPRHFsxZ8wiUvJURnDqzrhtVKMDu-yZDM9bYtx3Oc" />
+                                <div>
+                                    <h3 class="text-white text-xl font-bold mb-2">Nhà Dây Thép</h3>
+                                    <p class="text-gray-400 text-sm mb-4">Di tích lịch sử cấp quốc gia, nơi ghi dấu ấn
+                                        của ngành bưu chính viễn thông thời kỳ kháng chiến.</p>
+                                    <a class="text-primary text-sm font-bold hover:underline" href="#">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-[#1a2c15] p-6 rounded-3xl border border-white/5 hover:border-primary/30 transition-colors">
+                            <div class="flex flex-col sm:flex-row gap-6">
+                                <img alt="Statue monument in a park setting"
+                                    class="w-full sm:w-32 h-32 rounded-2xl object-cover shrink-0"
+                                    data-alt="Statue monument in a park setting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjIP1T7HJnTute7TbdUZTOBSGKHctZ9RAefsQ4k-L-fCFBFI2-G8GJnHr2rKdyncU904crCCPj_fc2LDZ1K-qKGxZ2_MDPB1ufa7GA3bI0E2xDo7o0SCEuEEozOmGv1NQkxtn-olBbK97gmBSwUlCkn2KBdp93bH-HryuMwtfOzi5lpI4UXGk0e62b_xGp-Nn3NaxJZiysHvT2ya7Laq3-JgxHh0TjO36lEgSaPZfYxBqmnbImGxxiyUQ4hXXh6fbGbFW77XcBmfs" />
+                                <div>
+                                    <h3 class="text-white text-xl font-bold mb-2">Khu tưởng niệm Bác Hồ</h3>
+                                    <p class="text-gray-400 text-sm mb-4">Nơi thể hiện lòng kính yêu của người dân Cà
+                                        Mau đối với Chủ tịch Hồ Chí Minh.</p>
+                                    <a class="text-primary text-sm font-bold hover:underline" href="#">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Crafts Column -->
+                    <div class="flex flex-col gap-6">
+                        <h2 class="text-white text-3xl font-bold flex items-center gap-3">
+                            <span
+                                class="p-2 bg-primary/10 rounded-full text-primary material-symbols-outlined">handyman</span>
+                            Làng nghề truyền thống
+                        </h2>
+                        <div class="relative h-full min-h-[300px] rounded-3xl overflow-hidden group">
+                            <img alt="Close up of hands weaving bamboo or dried grass"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Close up of hands weaving bamboo or dried grass"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDSTpo04CXNYOLN3SFyYvEES1qDsy1VF96i6etXpgf16-9g7nrtBtJIv3ik77G8Mzct3uyNZOXGy7F2yMpTcKxRtGmmBP1NrraKylhmWppP0cEQrxoHHBJqjlcYuNC8bptsNnkTUsOXewQ0oOCYlaHOyUroa9ncbbmKCnNLEggXJlM_nB0rBHu577aC5JuaMW3nq_oC4Hpjuh44K_8RPNwg9b6NixOxTrYbVtmuDOb7wmvIJ_qMkILRcq4iP9CyElBg5u7IEXaAeo" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+                            </div>
+                            <div class="absolute bottom-0 left-0 p-8">
+                                <h3 class="text-white text-2xl font-bold mb-2">Nghề dệt chiếu Tân Duyệt</h3>
+                                <p class="text-gray-300 mb-6">Nét đẹp văn hóa hàng trăm năm tuổi, những đôi bàn tay khéo
+                                    léo dệt nên những tấm chiếu hoa rực rỡ sắc màu.</p>
+                                <button
+                                    class="flex items-center gap-2 text-primary font-bold hover:text-white transition-colors">
+                                    Xem chi tiết <span class="material-symbols-outlined">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Newsletter / CTA Section -->
+        <section class="py-20 px-4">
+            <div
+                class="max-w-5xl mx-auto bg-gradient-to-br from-[#2c4823] to-[#152211] rounded-[3rem] p-8 md:p-16 text-center relative overflow-hidden border border-white/10">
+                <!-- Abstract patterns -->
+                <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none"
+                    style="background-image: radial-gradient(#46ec13 1px, transparent 1px); background-size: 32px 32px;">
+                </div>
+                <h2 class="text-white text-3xl md:text-5xl font-black mb-6 relative z-10">Sẵn sàng cho chuyến đi?</h2>
+                <p class="text-gray-200 text-lg mb-8 max-w-xl mx-auto relative z-10">Đăng ký để nhận thông tin ưu đãi
+                    tour du lịch Cà Mau mới nhất và cẩm nang du lịch miễn phí.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto relative z-10">
+                    <input
+                        class="flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary backdrop-blur-sm"
+                        placeholder="Địa chỉ email của bạn" type="email" />
+                    <button
+                        class="px-8 py-4 bg-primary hover:bg-white text-[#152211] font-bold rounded-full transition-colors shadow-lg shadow-primary/20">Đăng
+                        ký ngay</button>
+                </form>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="bg-[#0a1108] border-t border-white/5 pt-16 pb-8">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-10 lg:px-40">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="flex items-center gap-2 text-white mb-6">
+                            <div class="size-8 text-primary">
+                                <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z"
+                                        fill="currentColor" fill-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h2 class="text-xl font-bold">Du lịch Cà Mau</h2>
+                        </div>
+                        <p class="text-gray-400 mb-6">Cổng thông tin du lịch chính thức. Khám phá vẻ đẹp tận cùng đất
+                            nước, nơi thiên nhiên hòa quyện cùng bản sắc văn hóa độc đáo.</p>
+                        <div class="flex gap-4">
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-[#152211] transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-lg">public</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-[#152211] transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-lg">share</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-[#152211] transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-lg">mail</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-4">Khám phá</h3>
+                        <ul class="space-y-3 text-gray-400">
+                            <li><a class="hover:text-primary transition-colors" href="#">Điểm đến nổi bật</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Ẩm thực đặc sản</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Lễ hội văn hóa</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Làng nghề truyền thống</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-4">Liên hệ</h3>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1">location_on</span>
+                                <span>TP. Cà Mau, Tỉnh Cà Mau</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm">call</span>
+                                <span>+84 290 123 456</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm">email</span>
+                                <span>info@camautourism.vn</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-white/5 pt-8 text-center text-gray-500 text-sm">
+                    <p>© 2024 Du lịch Cà Mau. Bản quyền thuộc về Sở Văn hóa, Thể thao và Du lịch Cà Mau.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ca Mau Destinations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#ffe3ea",
+                        "on-surface": "#dbe6d1",
+                        "primary-fixed-dim": "#3de400",
+                        "surface-deep": "#0f1a0c",
+                        "on-secondary": "#2a3327",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#dbe6d1",
+                        "on-tertiary-fixed": "#350d1e",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#151e13",
+                        "background-dark": "#142210",
+                        "on-primary": "#093900",
+                        "outline-variant": "#3d4b36",
+                        "border-organic": "#2c3928",
+                        "on-tertiary": "#4e2233",
+                        "tertiary-container": "#ffbbd0",
+                        "on-primary-container": "#166500",
+                        "on-secondary-container": "#b1bcab",
+                        "surface": "#0d1609",
+                        "primary-container": "#46ec13",
+                        "background": "#0d1609",
+                        "surface-dim": "#0d1609",
+                        "inverse-primary": "#196d00",
+                        "surface-container-low": "#151e11",
+                        "on-tertiary-container": "#7b4759",
+                        "secondary-fixed": "#dbe6d5",
+                        "on-background": "#dbe6d1",
+                        "surface-variant": "#2e3729",
+                        "secondary-fixed-dim": "#bfcab9",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#3de400",
+                        "surface-container-highest": "#2e3729",
+                        "on-primary-fixed": "#032100",
+                        "on-surface-variant": "#bbcbb0",
+                        "secondary-container": "#424c3f",
+                        "on-error": "#690005",
+                        "surface-bright": "#323c2d",
+                        "surface-container": "#192215",
+                        "inverse-on-surface": "#2a3325",
+                        "primary": "#aaff8c",
+                        "surface-container-lowest": "#081005",
+                        "on-primary-fixed-variant": "#115300",
+                        "tertiary-fixed-dim": "#f7b4c9",
+                        "outline": "#86957c",
+                        "surface-container-high": "#232d1f",
+                        "text-on-dark": "#dbe6d1",
+                        "on-tertiary-fixed-variant": "#693849",
+                        "on-secondary-fixed-variant": "#40493d",
+                        "secondary": "#bfcab9",
+                        "tertiary-fixed": "#ffd9e3",
+                        "primary-fixed": "#7aff54"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "1.5rem",
+                        "section-padding": "5rem",
+                        "base": "4px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "display-xl": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "display-xl-mobile": ["Manrope"],
+                        "label-bold": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "display-xl-mobile": ["48px", { "lineHeight": "1.1", "fontWeight": "800" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #142210; color: #dbe6d1; }
+    </style>
+</head>
+<body class="bg-background-dark text-on-surface antialiased font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed w-full top-0 z-50 bg-surface/80 dark:bg-surface-deep/80 backdrop-blur-xl border-b border-organic/20 shadow-sm">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed-dim tracking-tight">
+                Ca Mau Tourism
+            </div>
+<div class="hidden md:flex space-x-6">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Culinary</a>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary" href="#">Destinations</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Relics</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Craft Villages</a>
+</div>
+<div class="flex space-x-4">
+<button class="hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 rounded-full transition-all scale-95 active:scale-90 duration-200 p-2 text-primary dark:text-primary-fixed-dim">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">language</span>
+</button>
+<button class="hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 rounded-full transition-all scale-95 active:scale-90 duration-200 p-2 text-primary dark:text-primary-fixed-dim">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-24 px-gutter min-h-[614px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Ca Mau Landscape" class="w-full h-full object-cover opacity-40" data-alt="A breathtaking aerial view of the lush, vibrant green mangrove forests of Ca Mau, Vietnam, intertwining with winding river channels. The scene is illuminated by the golden hour sunlight, creating deep, moody contrasts. The aesthetic is modern organic, highly detailed, capturing the raw, untouched beauty of the ecological ecosystem." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3aLTUj7TrTrHI2iFOmk6E3n6DeIXSTviRIQB9pw2iV9qNomRGSJWHzr3KEkhjOiyxTlrB7glnvYVQsi6Od7BOd1e-JRcLB5uqnpz5ySimyFEDOyE-5nlR_3MwTL02u8KGiH_tcl0uYd18Uq4luePMTMVfoMgX6It_NF2LyIYcFGeCDCGD-gqLMQNzzIK0KQ9IdAZ8dEiqTIsQ6KCOgPmjY3JjIlnBvNPo7SxTFKQduvrzSU00I30TpmPSEJaEN48OT_5XWmgDyNU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/80 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center max-w-3xl mx-auto">
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl text-primary mb-6 drop-shadow-2xl">Khám Phá Cà Mau</h1>
+<p class="font-body-lg text-body-lg text-on-surface opacity-90 max-w-2xl mx-auto">Hành trình về Đất Mũi - Nơi con sông rạch hiền hòa ôm lấy những cánh rừng tràm xanh thẳm, khám phá vẻ đẹp hoang sơ và kỳ vĩ của thiên nhiên.</p>
+</div>
+</header>
+<!-- Content Sections -->
+<main class="max-w-container-max mx-auto px-gutter pb-section-padding space-y-section-padding">
+<!-- Destination Bento Grid -->
+<section>
+<div class="mb-12 text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Điểm Đến Nổi Bật</h2>
+<div class="w-16 h-1 bg-primary rounded-full mx-auto md:mx-0"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+<!-- Mũi Cà Mau -->
+<div class="md:col-span-2 md:row-span-2 relative rounded-xl overflow-hidden group">
+<img alt="Mui Ca Mau" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sweeping, dramatic landscape shot of Mui Ca Mau (Ca Mau Cape) at sunset. The sky is painted in rich hues of orange and deep purple, reflecting over the calm coastal waters. Silhouettes of mangrove trees frame the shot. The lighting is cinematic, highlighting the wild, adventurous spirit of the southernmost tip of Vietnam." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyruQqDSU4UjIcdNnagYbbEsaHL5SrYy-3Udl3KAQxP_5FRDRBAxHsakqd5Ixw8Fsn-kS3cQuP3BD_xfDANpw7LmyVfCy1pqLCnNNMIOKtEaBVWH20khAGk0wbuT3__belb-ghVIZtwNOGKhNSXjw2BCiJNj-lm00XLMJNSt7Qsyjf5HSkjpaat1NJGth-zGvSfrop3jbAiSSrPyTa2rKPunOtUSNJvFD64leSsYekoWLa88kELcq0JxoWa7iaVcWuqwcufxV5Jbg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="inline-block bg-primary-container text-on-primary-container font-label-bold text-label-bold px-3 py-1 rounded-full mb-3">Bí Ẩn &amp; Hùng Vĩ</span>
+<h3 class="font-headline-md text-headline-md text-primary-fixed mb-2">Mũi Cà Mau</h3>
+<p class="font-body-md text-body-md text-on-surface opacity-90 hidden md:block max-w-lg">Cực Nam Tổ quốc, nơi duy nhất trên đất liền Việt Nam có thể ngắm mặt trời mọc ở biển Đông và lặn ở biển Tây.</p>
+</div>
+</div>
+<!-- Rừng U Minh Hạ -->
+<div class="relative rounded-xl overflow-hidden group">
+<img alt="U Minh Ha Forest" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A mysterious, dense view deep inside the U Minh Ha melaleuca forest. Tall, straight tree trunks rise from the dark, reflective waters, creating a sense of ancient stillness. Shafts of sunlight pierce through the thick canopy above. The color palette is dominated by rich, deep greens and earthy browns, perfectly aligned with the eco-tourism aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASntBlhKG7-zz-z0ZHaj9YEUvJxn37FM4Lv25W8VfRzaGbddGWn8_L00JmW-wYdSRbLOaqPQWvsuuWx9A_uCUiAeNmcK06fiM_MNlXE1yDydnRo1ZdymM-W6Qag0KtUzFa6eF9G028_m5Rsbg47N_21kv09O9zYNM8ZAABsXySCnwbaS8IXFRrNasdZ7unmIEFSHfztjve7bVN32VIyhKAGBQCF1B4JVhy6ErtQgaRPNlBYhI5V9b4SLgPSCpxRxvpEVCgNC0j8u0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="font-headline-md text-headline-md text-primary-fixed mb-1">Rừng U Minh Hạ</h3>
+<p class="font-body-md text-body-md text-on-surface opacity-80">Hệ sinh thái rừng tràm ngập nước đặc trưng.</p>
+</div>
+</div>
+<!-- Hòn Đá Bạc -->
+<div class="relative rounded-xl overflow-hidden group">
+<img alt="Hon Da Bac" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A rugged coastline view of Hon Da Bac (Silver Stone Island). Large, smooth, silver-grey granite boulders pile up against the crashing ocean waves. The sea is a deep, moody blue, contrasting with the stark stones. The scene is shot with high clarity and contrast, conveying a sense of raw, untamed natural power." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU9FWePXH6p9Bbn-Roqplmeq-x4twCI4bdIRQp9Oe4xNAHPunuW7czaJH9yjTR-xudhuT1P0LWZ-9zrH1MJLgX8Q2eaRuruGaHKdgX4Ei1kHYumL6WCkC30dYxowuIk5FVtDWLB3tZHCJdSuiVjkB-pCMJ3wgSjVl_WX5p81mz8fCJvyirUZDzipyaXGVo9vWdQbHnwQqvghGvZEuhfLSZ03OhUCqd31DZJQJ-ANE_m2DE6M1uvf56ANuoWax_p-VsN2J_LCZeMCM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="font-headline-md text-headline-md text-primary-fixed mb-1">Hòn Đá Bạc</h3>
+<p class="font-body-md text-body-md text-on-surface opacity-80">Cụm đảo ven bờ với vẻ đẹp hoang sơ, kỳ thú.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Information & Activities Layout -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Info Column -->
+<div class="lg:col-span-5 space-y-8">
+<div class="bg-surface-container-high rounded-xl p-8 border border-organic">
+<h3 class="font-headline-md text-headline-md text-primary mb-6 flex items-center">
+<span class="material-symbols-outlined mr-3">info</span>
+                        Thông Tin Cần Biết
+                    </h3>
+<ul class="space-y-6">
+<li class="flex items-start">
+<div class="bg-surface-variant p-2 rounded-full mr-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface mb-1">Thời điểm lý tưởng</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Tháng 12 đến tháng 4 (Mùa khô): Thời tiết đẹp, ít mưa, thuận lợi di chuyển và tham gia các hoạt động ngoài trời.</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="bg-surface-variant p-2 rounded-full mr-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">directions_car</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface mb-1">Cách di chuyển</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Xe khách từ TP.HCM (khoảng 7-8 tiếng). Từ trung tâm Cà Mau đi các điểm bằng xe máy, taxi hoặc vỏ lãi (ca nô nhỏ).</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="bg-surface-variant p-2 rounded-full mr-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_activity</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface mb-1">Giá vé tham khảo</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Khu du lịch Đất Mũi: ~30.000 VNĐ/người.<br/>Rừng U Minh Hạ: ~10.000 VNĐ/người (Chưa tính phí thuê thuyền/vỏ lãi).</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Right Activities Column -->
+<div class="lg:col-span-7">
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8">Trải Nghiệm Độc Đáo</h3>
+<div class="space-y-6">
+<!-- Activity Card 1 -->
+<div class="bg-surface p-6 rounded-xl border border-organic/50 flex flex-col sm:flex-row gap-6 items-center hover:bg-surface-variant/30 transition-colors">
+<img alt="Vỏ lãi" class="w-full sm:w-40 h-40 object-cover rounded-lg" data-alt="A low-angle, dynamic shot of a traditional 'vỏ lãi' (small wooden longboat) cutting through a narrow water channel in a mangrove forest. Water splashes energetically around the bow. The surrounding greenery is lush and dense, creating a tunnel effect. The lighting is dappled, filtering through the leaves, emphasizing an adventurous river journey." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFapU5RQDaMINCXcPFFZqx3mvf6eQ6iARBAvcngMY7dQizEmlAV1E6ggtWIYRsfeJyAEw7ztij72T3VtXPKRPrb8qRSpwTjRGJwZQOvSywJTayOquMHnwL6rmNxCOQx4KRl_KSsd0bdZoHxxjz74FpGs5M_gEybgktrfgaG0_7hpNM-tTKnqT8TMx79nhXZLU7NpZOrV0KNTal_UThfD6X8DTYkr6kr5hux-LyDk7wwe7DwE8IC-9fjYD9fLEc6W47NXPpIFYLINw"/>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary-fixed mb-2">Đi vỏ lãi xuyên rừng</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Len lỏi qua những tán lá rừng tràm rậm rạp trên chiếc vỏ lãi đặc trưng của miền Tây, cảm nhận không khí trong lành và lắng nghe tiếng chim hót.</p>
+</div>
+</div>
+<!-- Activity Card 2 -->
+<div class="bg-surface p-6 rounded-xl border border-organic/50 flex flex-col sm:flex-row gap-6 items-center hover:bg-surface-variant/30 transition-colors">
+<img alt="Hoàng hôn" class="w-full sm:w-40 h-40 object-cover rounded-lg" data-alt="A serene, breathtaking view of a vibrant sunset over a calm, expansive ocean. The sky is a gradient of deep magenta, burning orange, and soft purple. Small silhouettes of fishing boats dot the distant horizon. The overall mood is peaceful and profoundly majestic, reflecting the unique beauty of the coastal environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPp-oRWEst26w2K3dfvG6h0Vw2VhQ0xCSj1LLwnnnsUzwbA27FZ8i_4nlYdDuZXPaqClgUQoVo-NbHF7qVI8EoFjJU2IiyFArfwlatiPJEIe0XeLqNElAVrqLOJ34I6cYWdpMXPr_AFVg5nW-hemhbvw0s7UFy-9UjqugoiF6AybWNzmCK9QP8qrDfm71N0_3SAqOJ89OwiTi9QK_vA9gtnQvNnaEupJV2kiA35NqFTKvTT_x6J1V9QMmlVvDOj41Vso8sQYxV0v8"/>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary-fixed mb-2">Ngắm hoàng hôn trên biển Tây</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Chiêm ngưỡng khoảnh khắc mặt trời từ từ lặn xuống mặt biển bao la, nhuộm đỏ cả một góc trời tại Mũi Cà Mau.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-deep dark:bg-surface-container-lowest w-full pt-section-padding pb-gutter border-t border-organic/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-gutter max-w-container-max mx-auto">
+<div class="md:col-span-2">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-4">Ca Mau Tourism</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 max-w-sm">Khám phá vẻ đẹp hoang sơ, tận hưởng không khí trong lành và trải nghiệm văn hóa độc đáo tại cực Nam Tổ quốc.</p>
+<div class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 duration-300">
+                    © 2024 Ca Mau Tourism Authority. Mangrove Majesty Edition.
+                </div>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface mb-4">Links</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 duration-300" href="#">Contact</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 duration-300" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 duration-300" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 duration-300" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface mb-4">Kết nối</h4>
+<div class="flex space-x-4">
+<button class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

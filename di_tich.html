@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Di tích lịch sử Cà Mau - Hành trình về nguồn</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#ffe3ea",
+                        "on-surface": "#dbe6d1",
+                        "primary-fixed-dim": "#3de400",
+                        "surface-deep": "#0f1a0c",
+                        "on-secondary": "#2a3327",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#dbe6d1",
+                        "on-tertiary-fixed": "#350d1e",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#151e13",
+                        "background-dark": "#142210",
+                        "on-primary": "#093900",
+                        "outline-variant": "#3d4b36",
+                        "border-organic": "#2c3928",
+                        "on-tertiary": "#4e2233",
+                        "tertiary-container": "#ffbbd0",
+                        "on-primary-container": "#166500",
+                        "on-secondary-container": "#b1bcab",
+                        "surface": "#0d1609",
+                        "primary-container": "#46ec13",
+                        "background": "#0d1609",
+                        "surface-dim": "#0d1609",
+                        "inverse-primary": "#196d00",
+                        "surface-container-low": "#151e11",
+                        "on-tertiary-container": "#7b4759",
+                        "secondary-fixed": "#dbe6d5",
+                        "on-background": "#dbe6d1",
+                        "surface-variant": "#2e3729",
+                        "secondary-fixed-dim": "#bfcab9",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#3de400",
+                        "surface-container-highest": "#2e3729",
+                        "on-primary-fixed": "#032100",
+                        "on-surface-variant": "#bbcbb0",
+                        "secondary-container": "#424c3f",
+                        "on-error": "#690005",
+                        "surface-bright": "#323c2d",
+                        "surface-container": "#192215",
+                        "inverse-on-surface": "#2a3325",
+                        "primary": "#aaff8c",
+                        "surface-container-lowest": "#081005",
+                        "on-primary-fixed-variant": "#115300",
+                        "tertiary-fixed-dim": "#f7b4c9",
+                        "outline": "#86957c",
+                        "surface-container-high": "#232d1f",
+                        "text-on-dark": "#dbe6d1",
+                        "on-tertiary-fixed-variant": "#693849",
+                        "on-secondary-fixed-variant": "#40493d",
+                        "secondary": "#bfcab9",
+                        "tertiary-fixed": "#ffd9e3",
+                        "primary-fixed": "#7aff54"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "1.5rem",
+                        "section-padding": "5rem",
+                        "base": "4px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "display-xl": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "display-xl-mobile": ["Manrope"],
+                        "label-bold": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "display-xl-mobile": ["48px", { "lineHeight": "1.1", "fontWeight": "800" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(20, 34, 16, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(44, 57, 40, 0.4);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(8, 16, 5, 0.2) 0%, rgba(8, 16, 5, 0.9) 100%);
+        }
+        .card-gradient {
+            background: linear-gradient(to top, rgba(8, 16, 5, 0.9) 0%, rgba(8, 16, 5, 0) 60%);
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-on-surface font-body-md min-h-screen flex flex-col antialiased">
+<!-- Navigation (Hidden on mobile per rules, shown on desktop) -->
+<header class="hidden md:flex bg-surface/80 dark:bg-surface-deep/80 backdrop-blur-xl text-primary dark:text-primary-fixed-dim font-body-md text-body-md fixed w-full top-0 z-50 border-b border-organic/20 shadow-sm flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto left-0 right-0">
+<div class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed-dim tracking-tight">Ca Mau Tourism</div>
+<nav class="flex gap-8">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 rounded-full px-4 py-2 scale-95 active:scale-90 duration-200" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 rounded-full px-4 py-2 scale-95 active:scale-90 duration-200" href="#">Culinary</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 rounded-full px-4 py-2 scale-95 active:scale-90 duration-200" href="#">Destinations</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 rounded-full px-4 py-2 scale-95 active:scale-90 duration-200" href="#">Relics</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 rounded-full px-4 py-2 scale-95 active:scale-90 duration-200" href="#">Craft Villages</a>
+</nav>
+<div class="flex gap-4">
+<button class="hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 rounded-full p-2 transition-all scale-95 active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</button>
+<button class="hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 rounded-full p-2 transition-all scale-95 active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-24 md:pt-32">
+<!-- Hero Section -->
+<section class="relative w-full h-[614px] min-h-[500px] mb-section-padding">
+<div class="absolute inset-0 w-full h-full">
+<img alt="Historical temple in Vietnam" class="w-full h-full object-cover" data-alt="A grand, ancient Vietnamese temple set amidst lush, moody greenery at twilight. The scene is illuminated by soft, atmospheric lighting, highlighting the intricate architecture and weathered stone surfaces. The color palette features deep, rich greens of the surrounding foliage contrasting with the warm, muted tones of the historical structure. The overall aesthetic is solemn, historical, and deeply integrated with nature, matching a high-end eco-tourism design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbkbbK4G6_JGjwYAW9i1xjbGNr6tBvdKUN7Op_u3zY1mjl2-txNBrWUoLByyW9cn85zj2YJUlBERHhEsH_yvdhlMh4c5Jhg6U8hOqoUw-3192rPGJs_NSOSNByCHiz9iQFL_5bMJDvg8HwzyjLDT9FfkAqXM8x_8LubNJJO5wbyCpOAsm-M5NigYmxml9DRqZxqF0QzUFZ0byvwc459c4e5cyCO-i3DpT4ShWB7TsckD8g0le0K7rkXBG5Vz4IvzuC-x8vfpi6kyA"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative h-full flex flex-col justify-end px-gutter max-w-container-max mx-auto pb-16">
+<span class="font-label-bold text-label-bold text-primary mb-4 tracking-widest uppercase inline-block bg-primary/20 backdrop-blur-md px-3 py-1 rounded-full w-max">Di Tích Lịch Sử</span>
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface mb-6 max-w-4xl">Hành Trình Về Nguồn</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Khám phá những câu chuyện hào hùng và nét đẹp văn hóa tâm linh qua các di tích lịch sử nổi tiếng tại vùng đất cực Nam Tổ quốc.</p>
+</div>
+</section>
+<!-- Main Content -->
+<div class="px-gutter max-w-container-max mx-auto mb-section-padding">
+<!-- Bento Grid Features -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
+<!-- Large Featured Item -->
+<article class="md:col-span-8 relative rounded-xl overflow-hidden group min-h-[400px]">
+<img alt="Khu tưởng niệm Bác Hồ" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A serene and respectful memorial site surrounded by towering, ancient trees. The architecture features traditional Vietnamese elements with intricate woodwork and a tranquil courtyard. Soft, diffused daylight filters through the canopy, creating a peaceful, contemplative atmosphere. The scene is rendered in deep, organic greens and rich earth tones, aligning with a premium ecological travel aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYfIrr8F9jN-XwfRfZTvSA6b-d0fSun42bVedg1Lk8_CLWS7zVMPrESpQ0yjGWyqelUkD31bq5tQjwrtG_4Ct0SfYOfnVdl0TOuZE0ss2Hs0OHEE9XJLWmAWapL8nhZzbstJ8_KrFjKj6U5Zz5_hZhVFqpZ_HA4sHD7wgEAaraSIJ1g88snWDsoqYTc-koJJL6zdvkPA2y1zwtvRC3ujs5nOTKvF6uzaWMM7i8nCcHxt1Tk0S4hUCQwvS8R3eMQWV27p3Jofcps5A"/>
+<div class="absolute inset-0 card-gradient"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-3">Khu tưởng niệm Bác Hồ</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-2xl line-clamp-2">Nơi thiêng liêng thể hiện lòng tôn kính của nhân dân Cà Mau đối với vị lãnh tụ vĩ đại. Công trình mang đậm bản sắc văn hóa dân tộc giữa không gian xanh mát.</p>
+<div class="flex gap-4">
+<button class="bg-primary-container text-on-primary-container font-label-bold text-label-bold px-6 py-3 rounded-full hover:bg-primary-fixed transition-colors">Xem chi tiết</button>
+<button class="glass-panel text-on-surface font-label-bold text-label-bold px-6 py-3 rounded-full hover:bg-surface-variant/50 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> Bản đồ
+                            </button>
+</div>
+</div>
+</article>
+<!-- Smaller Items Stack -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<article class="relative flex-1 rounded-xl overflow-hidden group min-h-[250px]">
+<img alt="Chùa Monivongsa Bopharam" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A striking, golden-hued Khmer pagoda set against a dark, moody background. The intricate, colorful architectural details gleam under dramatic, focused lighting. The surrounding environment hints at lush tropical vegetation in deep shadows. The visual style is rich, cultural, and deeply atmospheric, fitting a sophisticated, modern dark-mode travel interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwRLVCFTdn9HwjZLC1bCydZdNruZouqe1aUV7OXrK8JR_bU0D5MDe0GYJexMES5Dt27GQm75yW7S4yM89bMisxU9lRZh_qdtQ1UibpZ5v0qi68nUDTNdmi3MI6Y_bMI2LOHzkmsO4zJYj0WmdwlktrlsnX8VTMaV3l9r5S-0j5Kh-5-lqY26vY7353N9gAOBkVLAyS42jr4Cnzsc7g4DQozwpbyi2FUuWA84cFBQCZDDe-EsgMxCezVtGgadXH022pkSaJpz4k-90"/>
+<div class="absolute inset-0 card-gradient"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6">
+<span class="inline-block bg-secondary-container/80 backdrop-blur-sm text-on-secondary-container font-label-bold text-xs px-2 py-1 rounded-md mb-2">Văn hóa Khmer</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 text-xl">Chùa Monivongsa Bopharam</h3>
+</div>
+</article>
+<article class="relative flex-1 rounded-xl overflow-hidden group min-h-[250px]">
+<img alt="Hòn Đá Bạc" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A rugged, dramatic coastal landscape featuring large, weathered boulders meeting the sea. The lighting is moody and overcast, emphasizing the texture of the rocks and the untamed power of the ocean. Deep, muted blues and greys contrast with the subtle organic greens of coastal vegetation. The scene captures a raw, adventurous eco-tourism vibe in a dark, premium aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBflFRRUSF7plYIhKOImOMGj24YV6-F5wmCVXr9R84MaXuL-eNKWc-VcxVSR4jcOXRKxjxLe29bLS-qLjifT58a2Gn6FFiiJXqidJ-m-xHBgQDCCuy-YJhswqwSe8-WFeKl0aD8i1VwKXTSRKGhGryDVo5RsGQ9iQUDy_-2q4ICWtpimSmpXLPC0o_HLNeSWXyuX4py2n2VwLv4QlmPOXyHnv0TaZ4daCWJemoC_HFvM8SP1XZPptCm-PBiQGjwFO5RMvT0nH1byNM"/>
+<div class="absolute inset-0 card-gradient"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6">
+<span class="inline-block bg-secondary-container/80 backdrop-blur-sm text-on-secondary-container font-label-bold text-xs px-2 py-1 rounded-md mb-2">Danh thắng</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 text-xl">Khu di tích Hòn Đá Bạc</h3>
+</div>
+</article>
+</div>
+</div>
+<!-- Historical Info Section with Glassmorphism -->
+<section class="glass-panel rounded-2xl p-8 md:p-12 border border-border-organic relative overflow-hidden">
+<div class="absolute top-0 right-0 opacity-5 w-64 h-64 -mr-16 -mt-16">
+<span class="material-symbols-outlined text-[200px]" data-icon="history_edu">history_edu</span>
+</div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Nhà dây thép</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Di tích lịch sử cấp quốc gia, nơi ghi dấu những chiến công thầm lặng mà oanh liệt của các chiến sĩ giao bưu trong thời kỳ kháng chiến. Đây là minh chứng sống động cho tinh thần thép của quân và dân Cà Mau.</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="schedule">schedule</span>
+<div>
+<strong class="block text-on-surface">Giờ mở cửa</strong>
+<span class="text-on-surface-variant">07:30 - 17:00 (Thứ 3 đến Chủ Nhật)</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="info">info</span>
+<div>
+<strong class="block text-on-surface">Quy định tham quan</strong>
+<span class="text-on-surface-variant">Trang phục lịch sự, giữ gìn vệ sinh chung, không quay phim chụp ảnh tại các khu vực cấm.</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative rounded-lg overflow-hidden h-80">
+<img alt="Old communication equipment" class="w-full h-full object-cover" data-alt="Vintage, weathered communication equipment from the mid-20th century displayed on a rustic wooden table. The lighting is cinematic and moody, casting deep shadows that highlight the textures of old metal, peeling paint, and worn dials. The color palette revolves around warm sepia tones, deep browns, and dark greens, perfectly evoking a nostalgic, historical narrative within a premium dark-mode design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL_lDbc__3tx3D3LdILw-shViFjjtSxwdwSRhsZEuS6XHbU7VPng7saLtawIZItV6gvv-74OH1t25RrmtgWyPByaE1ul4ycoGlHMs5CgDrQ2VJ1kos_J72gDBEi6f8sXyTsQhokktr7hz-NQLIIyprQgp6cQoQb_YXR2c0i4LYL5c1dloH-X9z0qtosRzr9oyjAZOkK1xqrcxPedC3F5s6pKzLh5lzQ1IH_PNqtqFX1qLUJv2gxg4Yv1pjUgXHJBUMD742AIAxeTU"/>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-deep dark:bg-surface-container-lowest text-primary dark:text-primary-fixed-dim font-body-md text-body-md w-full pt-section-padding pb-gutter border-t border-organic/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-4">Ca Mau Tourism</h3>
+<p class="text-on-surface-variant dark:text-on-surface-variant mb-4">© 2024 Ca Mau Tourism Authority. Mangrove Majesty Edition.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface opacity-80 hover:opacity-100 duration-300" href="#">Contact</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface opacity-80 hover:opacity-100 duration-300" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface opacity-80 hover:opacity-100 duration-300" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface opacity-80 hover:opacity-100 duration-300" href="#">FAQ</a>
+</div>
+</div>
+</footer>
+</body></html>
