@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 const FACTS = [
   { icon: 'history_edu', title: 'Di sản quốc gia', desc: 'Năm 2019, nghề muối ba khía Rạch Gốc được công nhận là Di sản văn hóa phi vật thể cấp quốc gia.' },
@@ -23,6 +24,12 @@ const PROCESS = [
 export default function BaKhiaRachGoc() {
   return (
     <>
+      <SEOHead
+        title="Ba Khía Rạch Gốc - Di Sản Văn Hóa Quốc Gia"
+        description="Ba Khía Rạch Gốc - từ món ăn bình dân đến Di sản văn hóa phi vật thể quốc gia 2019. Nghề muối ba khía truyền thống Cà Mau."
+        path="/am-thuc/ba-khia-rach-goc"
+        image="https://cotucamau.com/wp-content/uploads/2023/05/Ba_khia_muoi.jpg"
+      />
       <Navbar />
       <main className="pt-[72px]" style={{ background: '#f8fafc', color: '#1a2e1a' }}>
 
@@ -47,7 +54,7 @@ export default function BaKhiaRachGoc() {
 
           {/* Hero content */}
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-14 max-w-5xl mx-auto">
-            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest">
+            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-green-500 border border-primary/30 text-white text-xs font-bold uppercase tracking-widest">
               <span className="material-symbols-outlined text-sm">history_edu</span> Di sản văn hóa quốc gia
             </span>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-4 drop-shadow-2xl leading-tight">
@@ -63,7 +70,7 @@ export default function BaKhiaRachGoc() {
                 { icon: 'location_on', label: 'Rạch Gốc, Ngọc Hiển' },
                 { icon: 'eco', label: 'Gạch son đặc trưng' },
               ].map(s => (
-                <span key={s.label} className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-white text-sm font-medium">
+                <span key={s.label} className="flex items-center gap-1.5 bg-orange-500 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-white text-sm font-medium">
                   <span className="material-symbols-outlined text-primary text-base">{s.icon}</span>
                   {s.label}
                 </span>

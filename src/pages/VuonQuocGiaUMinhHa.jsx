@@ -1,10 +1,18 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 export default function VuonQuocGiaUMinhHa() {
   return (
     <>
+      <SEOHead
+        title="Vườn Quốc Gia U Minh Hạ - Di Sản Sinh Quyển UNESCO"
+        description="Vườn Quốc gia U Minh Hạ - lá phổi xanh ĐBSCL, UNESCO công nhận 2009. Hơn 8.500 ha rừng tràm, 200+ loài động vật quý hiếm."
+        path="/dia-diem/vuon-quoc-gia-u-minh-ha"
+        image="https://file.hstatic.net/1000217270/article/vuon_quoc_gia_u_minh_ha_1_5ef9d0a96e724e1f9be29f4cb7b2aea5.jpg"
+        type="place"
+      />
       <Navbar />
       <main className="pt-[100px]" style={{ background: '#f8fafc', color: '#ffffffff' }}>
 
@@ -25,10 +33,10 @@ export default function VuonQuocGiaUMinhHa() {
             <span className="text-white font-semibold">Vườn Quốc gia U Minh Hạ</span>
           </div>
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-14 max-w-5xl mx-auto">
-            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-primary/20 border border-primary/30 text-white text-xs font-bold uppercase tracking-widest">
+            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-green-500 border border-primary/30 text-white text-xs font-bold uppercase tracking-widest">
               <span className="material-symbols-outlined text-white">forest</span> Di sản sinh quyển UNESCO
             </span>
-            <h1 className="text-5xl md:text-7xl font-black text-primary mb-4 drop-shadow-2xl leading-tight">
+            <h1 className="text-5xl md:text-7xl font-black text-orange-500 mb-4 drop-shadow-2xl leading-tight">
               Vườn Quốc gia U Minh Hạ
             </h1>
             <p className="text-gray-200 text-lg md:text-xl max-w-2xl leading-relaxed">
@@ -41,7 +49,7 @@ export default function VuonQuocGiaUMinhHa() {
                 { icon: 'forest', label: 'Hơn 8.500 ha' },
                 { icon: 'pets', label: 'Gần 200 loài động vật' },
               ].map(s => (
-                <span key={s.label} className="flex items-center gap-1.5 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-1.5 text-white text-sm font-medium">
+                <span key={s.label} className="flex items-center gap-1.5 bg-orange-500 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-1.5 text-white text-sm font-medium">
                   <span className="material-symbols-outlined text-primary text-base">{s.icon}</span>
                   {s.label}
                 </span>

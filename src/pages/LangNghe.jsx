@@ -1,9 +1,16 @@
-﻿import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 export default function LangNghe() {
   return (
     <>
+      <SEOHead
+        title="Làng Nghề Truyền Thống Cà Mau"
+        description="Khám phá các làng nghề truyền thống Cà Mau - Dệt chiếu Tân Duyệt, Gác kèo ong U Minh, Làm tôm khô Rạch Gốc, Nghề làm muối và đan đát thủ công."
+        path="/lang-nghe"
+        image="https://dltm-cdn.vnptit3.vn/resources/portal//Images/VLG/adminportal_vlg/tin_tuc/a77_638277738732063185_287236366.jpg"
+      />
       <Navbar />
       <main className="flex flex-col w-full min-h-screen" style={{ background: '#f8fafc', color: '#1a2e1a' }}>
         {/* Hero */}

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 const ACTIVITIES = [
   { name: 'Mua sắm trên thuyền', icon: 'shopping_bag', desc: 'Trực tiếp mua hàng từ các thương hồ, từ rau củ quả tươi đến hải sản, trái cây miệt vườn.' },
@@ -21,6 +22,13 @@ const TIPS = [
 export default function ChoNoiCaMau() {
   return (
     <>
+      <SEOHead
+        title="Chợ Nổi Cà Mau - Văn Hóa Sông Nước Miền Tây"
+        description="Chợ Nổi Cà Mau trên sông Gành Hào - văn hóa giao thương sông nước độc đáo. Hướng dẫn tham quan, giờ họp chợ và trải nghiệm thú vị."
+        path="/dia-diem/cho-noi-ca-mau"
+        image="https://mia.vn/media/uploads/blog-du-lich/cho-noi-ca-mau-net-doc-dao-cua-mien-tay-song-nuoc-3-1663303247.jpg"
+        type="place"
+      />
       <Navbar />
       <main className="pt-[72px]" style={{ background: '#f8fafc', color: '#1a2e1a' }}>
 
@@ -41,7 +49,7 @@ export default function ChoNoiCaMau() {
             <span className="text-white font-semibold">Chợ Nổi Cà Mau</span>
           </div>
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-14 max-w-5xl mx-auto">
-            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-200 text-xs font-bold uppercase tracking-widest">
+            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-green-500 border border-blue-400/30 text-white text-xs font-bold uppercase tracking-widest">
               <span className="material-symbols-outlined text-sm">storefront</span> Văn Hóa Sông Nước
             </span>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-4 drop-shadow-2xl leading-tight">
@@ -56,7 +64,7 @@ export default function ChoNoiCaMau() {
                 { icon: 'location_on', label: 'Sông Gành Hào, TP. Cà Mau' },
                 { icon: 'photo_camera', label: 'Thiên đường check-in' },
               ].map(s => (
-                <span key={s.label} className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-white text-sm font-medium">
+                <span key={s.label} className="flex items-center gap-1.5 bg-orange-500 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-white text-sm font-medium">
                   <span className="material-symbols-outlined text-blue-300 text-base">{s.icon}</span>
                   {s.label}
                 </span>

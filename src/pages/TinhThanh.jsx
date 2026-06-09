@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 const DS = [
   { stt: 1, ten: 'Hà Nội', loai: 'thanh-pho', sapNhap: 'Giữ nguyên', ds: 8807523, dt: 3359.80, ma: '01', mvung: '24', trungTam: 'Hoàn Kiếm - Hà Nội', vung: 'ĐB sông Hồng', donvihanhchinh: '', phuong: 51, xa: 75, },
   { stt: 2, ten: 'Cao Bằng', loai: 'tinh', sapNhap: 'Giữ nguyên', ds: 573119, dt: 6700.40, ma: '04', mvung: '206', trungTam: 'Cao Bằng', vung: 'Trung du và miền núi phía Bắc', donvihanhchinh: '', phuong: '03', xa: 53 },
@@ -61,6 +62,11 @@ export default function TinhThanh() {
 
   return (
     <div className="min-h-screen" style={{ background: '#f0f4ff' }}>
+      <SEOHead
+        title="Tỉnh Thành Việt Nam - Sáp Nhập Hành Chính"
+        description="Danh sách 34 tỉnh thành Việt Nam sau sáp nhập hành chính. Thông tin dân số, diện tích, đơn vị hành chính và vùng kinh tế."
+        path="/tinh-thanh"
+      />
       <Navbar />
       <div className="pt-[72px]">
 

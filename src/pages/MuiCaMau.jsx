@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 const HIGHLIGHTS = [
   { icon: 'location_on', title: 'Cột mốc tọa độ', desc: 'Chạm tay vào cột mốc thiêng liêng hình tam giác với 3 mặt hướng về 3 phía Đông, Tây và Nam — biểu trưng cho sự vững chãi của đất nước.' },
@@ -26,6 +27,13 @@ const TIPS = [
 export default function MuiCaMau() {
   return (
     <>
+      <SEOHead
+        title="Mũi Cà Mau - Cực Nam Tổ Quốc Việt Nam"
+        description="Mũi Cà Mau - điểm cực Nam thiêng liêng của Tổ quốc. Ngắm bình minh biển Đông, hoàng hôn biển Tây, khám phá rừng ngập mặn 41.000 ha."
+        path="/dia-diem/mui-ca-mau"
+        image="https://ik.imagekit.io/tvlk/blog/2023/03/go-and-share-du-lich-mui-ca-mau-17.jpg"
+        type="place"
+      />
       <Navbar />
       <main className="pt-[72px]" style={{ background: '#f8fafc', color: '#1a2e1a' }}>
 
@@ -50,7 +58,7 @@ export default function MuiCaMau() {
 
           {/* Hero content */}
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-14 max-w-5xl mx-auto">
-            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest">
+            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-green-500 border border-primary/30 text-white text-xs font-bold uppercase tracking-widest">
               <span className="material-symbols-outlined text-sm">location_on</span> Cực Nam Tổ quốc
             </span>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-4 drop-shadow-2xl leading-tight">
@@ -66,7 +74,7 @@ export default function MuiCaMau() {
                 { icon: 'forest', label: 'Vườn Quốc gia 41.000 ha' },
                 { icon: 'sunny', label: 'Ngắm bình minh & hoàng hôn' },
               ].map(s => (
-                <span key={s.label} className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-white text-sm font-medium">
+                <span key={s.label} className="flex items-center gap-1.5 bg-orange-500 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-white text-sm font-medium">
                   <span className="material-symbols-outlined text-primary text-base">{s.icon}</span>
                   {s.label}
                 </span>

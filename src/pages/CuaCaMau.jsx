@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 const DISHES = [
   { name: 'Cua hấp bia', icon: 'local_bar', desc: 'Cua tươi hấp với bia vàng, gừng và sả, giữ nguyên vị ngọt tự nhiên của thịt cua.' },
@@ -21,6 +22,12 @@ const TIPS = [
 export default function CuaCaMau() {
   return (
     <>
+      <SEOHead
+        title="Cua Cà Mau - Đặc Sản Số 1 Đất Mũi"
+        description="Cua Cà Mau - thịt chắc ngọt, gạch son béo ngậy từ rừng ngập mặn. Tìm hiểu các món ngon từ cua và mẹo chọn cua tươi ngon."
+        path="/am-thuc/cua-ca-mau"
+        image="https://product.hstatic.net/1000166699/product/2_1e271b7804174354ae02c17816bbaf13_master.png"
+      />
       <Navbar />
       <main className="pt-[72px]" style={{ background: '#f8fafc', color: '#1a2e1a' }}>
 
@@ -43,7 +50,7 @@ export default function CuaCaMau() {
           </div>
           {/* Content */}
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-14 max-w-5xl mx-auto">
-            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest">
+            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-green-500 border border-primary/30 text-white text-xs font-bold uppercase tracking-widest">
               <span className="material-symbols-outlined text-sm">water</span> Hải Sản Đặc Sản
             </span>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-4 drop-shadow-2xl leading-tight">

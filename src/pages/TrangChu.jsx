@@ -2,11 +2,18 @@ import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 export default function TrangChu() {
   const scrollRef = useRef(null)
   return (
     <>
+      <SEOHead
+        title="Khám Phá Cà Mau"
+        description="Khám phá vẻ đẹp hoang sơ của Cà Mau - Đất Mũi tận cùng Tổ quốc với rừng ngập mặn, ẩm thực đặc sắc và làng nghề truyền thống. Hướng dẫn du lịch Cà Mau chi tiết."
+        path="/"
+        image="https://www.peacetour.com.vn/Upload/Article/8f89c83b-c860-4339-b0cc-0989c4adb593/1.jpg"
+      />
       <Navbar />
       <main className="flex flex-col w-full min-h-screen">
         {/* Hero Section */}

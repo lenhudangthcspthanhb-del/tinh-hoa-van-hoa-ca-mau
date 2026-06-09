@@ -1,10 +1,17 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 export default function DiaDiem() {
   return (
     <>
+      <SEOHead
+        title="Địa Điểm Du Lịch Cà Mau"
+        description="Khám phá các địa điểm du lịch nổi bật tại Cà Mau - Mũi Cà Mau, Vườn Quốc gia U Minh Hạ, Hòn Đá Bạc, Chợ Nổi và nhiều điểm đến hấp dẫn khác."
+        path="/dia-diem"
+        image="https://ik.imagekit.io/tvlk/blog/2023/03/go-and-share-du-lich-mui-ca-mau-17.jpg"
+      />
       <Navbar />
       <main>
         {/* Hero */}
@@ -114,6 +121,15 @@ export default function DiaDiem() {
                 <div className="absolute bottom-0 left-0 p-6">
                   <h3 className="text-white text-2xl font-bold mb-1">Vườn chim Bạc Liêu</h3>
                   <p className="text-green-500 text-base opacity-80">Vùng đất ngập nước là ngôi nhà của hàng nghìn loài chim quý hiếm, thiên đường của những người yêu thiên nhiên.</p>
+                </div>
+              </div>
+              {/* Chùa Monivongsa */}
+              <div className="relative rounded-xl overflow-hidden group">
+                <img alt="Chùa Monivongsa" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://mia.vn/media/uploads/blog-du-lich/chua-monivongsa-bopharam-ngoi-chua-khmer-doc-dao-cua-phat-giao-nam-tong-01-1663768729.jpg" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-6">
+                  <h3 className="text-white text-2xl font-bold mb-1">Chùa Monivongsa</h3>
+                  <p className="text-green-500 text-base opacity-80">Chùa Monivongsa Bopharam, ngôi chùa Khmer độc đáo của Phật giáo Nam tông.</p>
                 </div>
               </div>
 

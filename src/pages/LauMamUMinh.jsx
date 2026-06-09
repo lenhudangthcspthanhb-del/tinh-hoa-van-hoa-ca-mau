@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 const INGREDIENTS = [
   { name: 'Mắm cá linh', icon: 'water', desc: 'Linh hồn của nồi lẩu — mắm cá linh U Minh ủ đủ tháng, sánh mịn, thơm nồng đặc trưng.' },
@@ -19,14 +20,20 @@ const TIPS = [
 ]
 
 const GALLERY = [
-  { src: 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/Ngoc%20Diep/c%C3%A0%20mau/lau-mam-ca-mau-3.png', alt: 'Nồi lẩu mắm U Minh đầy đủ' },
-  { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBhEbwhICdVm_jJJIim5tijsNhDjJT0xVUBUlIGnzJU8kpZXALJrvcfw1N_mb_u9_FDdOpiHuPA_Lox0Na_7pxRcZ559p75WIOmtiDjZRM19vn7ZVHe6F9pW3o_lrpdlxGoi9Xu41j1fY8NYZjSWM6cWh2gsa1mjl9Hg3F7hUaFUPKxLMQX6XFoXFg2CXWSYjQQQ3IFZ49PX-ezCEHWruC-aP5yxKK4Y8mQ8g5SWGUc86kN2FgVUILupbQnstikSEy27g8BPfBA80g', alt: 'Lẩu mắm hương vị đồng quê' },
-  { src: 'https://mia.vn/media/uploads/blog-du-lich/an-gi-o-ca-mau-top-10-mon-an-ngon-nuc-tieng-o-ca-mau-19-1660122513.jpg', alt: 'Rau rừng ăn kèm lẩu mắm' },
+  { src: 'https://focusasiatravel.vn/wp-content/uploads/2021/11/lau-mam-u-minh-ca-mau-1.jpg', alt: 'Nồi lẩu mắm U Minh đầy đủ' },
+  { src: 'https://cdnv2.tgdd.vn/mwg-static/common/Common/H%C3%ACnh%20m%C3%B3n%20an%20t12%20%281200%20x%20676%20px%29%20%287%29.jpg', alt: 'Lẩu mắm hương vị đồng quê' },
+  { src: 'https://bepmina.vn/wp-content/uploads/2023/05/so-che-rau-an-lau-mam-mien-tay.jpeg', alt: 'Rau rừng ăn kèm lẩu mắm' },
 ]
 
 export default function LauMamUMinh() {
   return (
     <>
+      <SEOHead
+        title="Lẩu Mắm U Minh - Đặc Sản Đồng Quê Cà Mau"
+        description="Lẩu Mắm U Minh - hương vị đậm đà từ mắm cá linh, rau rừng xanh mướt. Cách nấu truyền thống và địa chỉ ăn ngon nhất."
+        path="/am-thuc/lau-mam-u-minh"
+        image="https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/Ngoc%20Diep/c%C3%A0%20mau/lau-mam-ca-mau-3.png"
+      />
       <Navbar />
       <main className="pt-[72px]" style={{ background: '#f8fafc', color: '#1a2e1a' }}>
 
@@ -51,7 +58,7 @@ export default function LauMamUMinh() {
 
           {/* Content */}
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-14 max-w-5xl mx-auto">
-            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-widest">
+            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-green-500 border border-amber-400/30 text-white text-xs font-bold uppercase tracking-widest">
               <span className="material-symbols-outlined text-sm">soup_kitchen</span> Đặc Sản Đồng Quê
             </span>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-4 drop-shadow-2xl leading-tight">

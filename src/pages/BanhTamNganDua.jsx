@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 const INGREDIENTS = [
   { icon: 'grain', name: 'Gạo một bụi đỏ', desc: 'Loại gạo ngon nức tiếng xứ Bạc Liêu, tạo nên hương vị riêng biệt mà không nơi nào có được.' },
@@ -30,6 +31,12 @@ const TASTES = [
 export default function BanhTamNganDua() {
   return (
     <>
+      <SEOHead
+        title="Bánh Tằm Ngan Dừa - Đặc Sản Bạc Liêu"
+        description="Bánh tằm Ngan Dừa - món ăn vặt trứ danh xứ Bạc Liêu, se tay từ gạo một bụi đỏ, ăn kèm xíu mại và nước cốt dừa béo ngậy."
+        path="/am-thuc/banh-tam-ngan-dua"
+        image="https://bazantravel.com/cdn/medias/uploads/27/27757-banh-tam-ngan-dua-700x467.jpg"
+      />
       <Navbar />
       <main className="pt-[72px]" style={{ background: '#f8fafc', color: '#1a2e1a' }}>
 
@@ -50,7 +57,7 @@ export default function BanhTamNganDua() {
             <span className="text-white font-semibold">Bánh tằm Ngan Dừa</span>
           </div>
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-14 max-w-5xl mx-auto">
-            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest">
+            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-green-500 border border-primary/30 text-white text-xs font-bold uppercase tracking-widest">
               <span className="material-symbols-outlined text-sm">restaurant</span> Ẩm thực Bạc Liêu
             </span>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-4 drop-shadow-2xl leading-tight">
@@ -66,7 +73,7 @@ export default function BanhTamNganDua() {
                 { icon: 'grain', label: 'Gạo một bụi đỏ' },
                 { icon: 'star', label: 'Không bao giờ ngán' },
               ].map(s => (
-                <span key={s.label} className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-white text-sm font-medium">
+                <span key={s.label} className="flex items-center gap-1.5 bg-orange-500 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-white text-sm font-medium">
                   <span className="material-symbols-outlined text-primary text-base">{s.icon}</span>
                   {s.label}
                 </span>

@@ -1,10 +1,17 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 export default function AmThuc() {
   return (
     <>
+      <SEOHead
+        title="Ẩm Thực Cà Mau"
+        description="Khám phá tinh hoa ẩm thực Cà Mau - Cua Cà Mau, Lẩu mắm U Minh, Bánh xèo Bạc Liêu, Ba khía Rạch Gốc và nhiều đặc sản miền Tây Nam Bộ."
+        path="/am-thuc"
+        image="https://mia.vn/media/uploads/blog-du-lich/danh-sach-quan-an-ngon-ca-mau-danh-cho-tin-do-am-thuc-phan-1--1663646708.jpg"
+      />
       <Navbar />
       <main className="flex flex-col w-full min-h-screen">
         {/* Hero */}

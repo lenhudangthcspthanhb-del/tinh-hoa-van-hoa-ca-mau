@@ -1,10 +1,17 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 export default function DiTich() {
   return (
     <>
+      <SEOHead
+        title="Di Tích Lịch Sử Cà Mau"
+        description="Hành trình về nguồn - Khám phá các di tích lịch sử Cà Mau: Khu tưởng niệm Bác Hồ, Chùa Monivongsa, Nhà dây thép, Tháp cổ Vĩnh Hưng và nhiều di tích quốc gia."
+        path="/di-tich"
+        image="https://images2.thanhnien.vn/528068263637045248/2024/2/12/du-lich-1707727394310920045876.jpg"
+      />
       <Navbar />
       <main className="flex flex-col w-full min-h-screen" style={{ background: '#f8fafc', color: '#1a2e1a' }}>
 

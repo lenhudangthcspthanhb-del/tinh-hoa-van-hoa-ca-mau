@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 import { TINH_INFO, DON_VI, QUAN_HUYEN } from '../data/caMauData'
 
 const fmt = n => n.toLocaleString('vi-VN')
@@ -31,6 +32,11 @@ export default function TinhCaMau() {
 
   return (
     <div className="min-h-screen" style={{ background: '#f0f4ff' }}>
+      <SEOHead
+        title="Tỉnh Cà Mau - Đơn Vị Hành Chính Chi Tiết"
+        description="Thông tin chi tiết tỉnh Cà Mau: dân số, diện tích, đơn vị hành chính sau sáp nhập. Tra cứu xã, phường, quận huyện."
+        path="/tinh-thanh/ca-mau"
+      />
       <Navbar />
       <div className="pt-[72px]">
 
@@ -51,7 +57,7 @@ export default function TinhCaMau() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
             {[
               { label: 'Mã tỉnh', value: T.ma, icon: 'tag', bg: 'bg-blue-50', bc: 'border-blue-200', ic: 'text-blue-500', vc: 'text-blue-700' },
-              { label: 'Đơn vị HC', value: `${T.phuong} P - ${T.xa} X`, icon: 'corporate_fare', bg: 'bg-emerald-50', bc: 'border-emerald-200', ic: 'text-emerald-500', vc: 'text-emerald-700' },
+              { label: 'Đơn vị Hành chính', value: `${T.phuong} Phường - ${T.xa} Xã`, icon: 'corporate_fare', bg: 'bg-emerald-50', bc: 'border-emerald-200', ic: 'text-emerald-500', vc: 'text-emerald-700' },
               { label: 'Diện tích', value: fmtDt(T.dt) + ' km²', icon: 'square_foot', bg: 'bg-cyan-50', bc: 'border-cyan-200', ic: 'text-cyan-500', vc: 'text-cyan-700' },
               { label: 'Dân số', value: fmt(T.ds), icon: 'group', bg: 'bg-amber-50', bc: 'border-amber-200', ic: 'text-amber-500', vc: 'text-amber-700' },
             ].map(s => (

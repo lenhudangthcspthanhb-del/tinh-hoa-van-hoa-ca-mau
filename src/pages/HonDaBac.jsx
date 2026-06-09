@@ -1,10 +1,18 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 export default function HonDaBac() {
   return (
     <>
+      <SEOHead
+        title="Hòn Đá Bạc - Cụm Đảo Huyền Bí Cà Mau"
+        description="Hòn Đá Bạc - cụm đảo với đá granit kỳ vĩ có niên đại 180 triệu năm, nổi giữa biển xanh vùng cực Nam Tổ quốc."
+        path="/dia-diem/hon-da-bac"
+        image="https://ik.imagekit.io/tvlk/blog/2024/03/go-and-share-du-lich-hon-da-bac-ca-mau-3-1024x527.webp?tr=q-70,c-at_max,w-1000,h-600"
+        type="place"
+      />
       <Navbar />
       <main className="pt-[72px]" style={{ background: '#f8fafc', color: '#1a2e1a' }}>
 
@@ -25,7 +33,7 @@ export default function HonDaBac() {
             <span className="text-white font-semibold">Hòn Đá Bạc</span>
           </div>
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-14 max-w-5xl mx-auto">
-            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest">
+            <span className="inline-flex items-center gap-1 px-3 py-1 mb-4 rounded-full bg-green-500 border border-primary/30 text-white text-xs font-bold uppercase tracking-widest">
               <span className="material-symbols-outlined text-sm">landscape</span> Kỳ quan thiên nhiên
             </span>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-4 drop-shadow-2xl leading-tight">
@@ -41,7 +49,7 @@ export default function HonDaBac() {
                 { icon: 'forest', label: 'Diện tích 6,5 ha' },
                 { icon: 'water', label: 'Đá granit kỳ bí' },
               ].map(s => (
-                <span key={s.label} className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-white text-sm font-medium">
+                <span key={s.label} className="flex items-center gap-1.5 bg-orange-500 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-white text-sm font-medium">
                   <span className="material-symbols-outlined text-primary text-base">{s.icon}</span>
                   {s.label}
                 </span>

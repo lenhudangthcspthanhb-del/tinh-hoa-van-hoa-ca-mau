@@ -1,0 +1,6 @@
+# robots.txt cho khamphacamau.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://khamphacamau.com/sitemap.xml

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 const FEATURES = [
   { name: 'Kiến trúc Angkor', icon: 'temple_buddhist', desc: 'Phong cách kiến trúc Angkor Campuchia với mái cong nhiều tầng, màu vàng rực rỡ đặc trưng của văn hóa Khmer.' },
@@ -28,6 +29,13 @@ const HISTORY_STEPS = [
 export default function ChuaMonivongsa() {
   return (
     <>
+      <SEOHead
+        title="Chùa Monivongsa Bopharam - Kiến Trúc Khmer Cà Mau"
+        description="Chùa Monivongsa Bopharam - ngôi chùa Khmer lớn nhất TP. Cà Mau với kiến trúc Angkor rực rỡ. Lịch sử, lễ hội Ok Om Bok và hướng dẫn tham quan."
+        path="/di-tich/chua-monivongsa-bopharam"
+        image="https://dltm-cdn.vnptit3.vn/resources/portal/Images/CMU/adminportal/1/hinhanh_1124_x_562_px_11_955444714.png"
+        type="place"
+      />
       <Navbar />
       <main className="pt-[72px]" style={{ background: '#f8fafc', color: '#1a2e1a' }}>
 
