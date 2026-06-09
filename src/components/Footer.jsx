@@ -146,7 +146,19 @@ export default function Footer() {
           </div>
         </div>
 
-
+        {/* Bản quyền & Thống kê */}
+        <div className="border-t border-white/10 pt-8 mt-4 flex flex-col md:flex-row items-center justify-between text-green-200 text-sm">
+          <p>© {new Date().getFullYear()} Khám phá Cà Mau. Bản quyền thuộc về Trường THCS Phong Thạnh.</p>
+          <div className="flex items-center gap-3 mt-4 md:mt-0 bg-white/5 py-1.5 px-3 rounded-full border border-white/10 hover:bg-white/10 transition-colors">
+            <span className="material-symbols-outlined text-lg text-[#4ade80]">monitoring</span>
+            <span className="font-medium">Thống kê truy cập:</span>
+            <img 
+              src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fkhamphacamau.com&label=L%C6%B0%E1%BB%A3t%20xem&labelColor=%23064e3b&countColor=%2316a34a&style=flat-square" 
+              alt="Visitor Count" 
+              className="h-5 rounded-sm"
+            />
+          </div>
+        </div>
       </div>
     </footer>
   )
