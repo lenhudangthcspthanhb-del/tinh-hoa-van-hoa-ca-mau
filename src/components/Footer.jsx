@@ -124,7 +124,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/tinhthanh" className="hover:text-[#4ade80] transition-colors">
+                <Link to="/tinh-thanh" className="hover:text-[#4ade80] transition-colors">
                   34 tỉnh thành
                 </Link>
               </li>
