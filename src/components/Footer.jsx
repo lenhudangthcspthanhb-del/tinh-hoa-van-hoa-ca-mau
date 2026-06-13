@@ -123,6 +123,11 @@ export default function Footer() {
                   Làng nghề truyền thống
                 </Link>
               </li>
+              <li>
+                <Link to="/tinhthanh" className="hover:text-[#4ade80] transition-colors">
+                  34 tỉnh thành
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -152,9 +157,9 @@ export default function Footer() {
           <div className="flex items-center gap-3 mt-4 md:mt-0 bg-white/5 py-1.5 px-3 rounded-full border border-white/10 hover:bg-white/10 transition-colors">
             <span className="material-symbols-outlined text-lg text-[#4ade80]">monitoring</span>
             <span className="font-medium">Thống kê truy cập:</span>
-            <img 
-              src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fkhamphacamau.com&label=L%C6%B0%E1%BB%A3t%20xem&labelColor=%23064e3b&countColor=%2316a34a&style=flat-square" 
-              alt="Visitor Count" 
+            <img
+              src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fkhamphacamau.com&label=L%C6%B0%E1%BB%A3t%20xem&labelColor=%23064e3b&countColor=%2316a34a&style=flat-square"
+              alt="Visitor Count"
               className="h-5 rounded-sm"
             />
           </div>
