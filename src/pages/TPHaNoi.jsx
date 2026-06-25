@@ -2,17 +2,17 @@ import { useState, useMemo, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SEOHead from '../components/SEOHead'
-import { TINH_INFO, DON_VI, QUAN_HUYEN } from '../data/caMauData'
+import { TINH_INFO, DON_VI, QUAN_HUYEN } from '../data/TPHaNoiData'
 
 const fmt = n => n.toLocaleString('vi-VN')
 const fmtDt = n => n.toFixed(2).replace('.', ',')
 
-export default function TinhCaMau() {
+export default function TPHaNoi() {
   const [query, setQuery] = useState('')
   const [loaiFilter, setLoaiFilter] = useState('all')
   const [qhFilter, setQhFilter] = useState('all')
   const [page, setPage] = useState(1)
-  const PER_PAGE = 50
+  const PER_PAGE = 30
 
   const filtered = useMemo(() => {
     return DON_VI.filter(p => {
@@ -33,23 +33,23 @@ export default function TinhCaMau() {
   return (
     <div className="min-h-screen" style={{ background: '#f0f4ff' }}>
       <SEOHead
-        title="Tỉnh Cà Mau - Đơn Vị Hành Chính Chi Tiết"
-        description="Thông tin chi tiết tỉnh Cà Mau: dân số, diện tích, đơn vị hành chính sau sáp nhập. Tra cứu xã, phường, quận huyện."
-        path="/tinh-thanh/ca-mau"
+        title="Thủ Đô Hà Nội - Đơn Vị Hành Chính Chi Tiết"
+        description="Thông tin chi tiết Thủ Đô Hà Nội: dân số, diện tích, đơn vị hành chính sau sáp nhập. Tra cứu xã, phường, quận huyện."
+        path="/tinh-thanh/ha-noi"
       />
       <Navbar />
       <div className="pt-[72px]">
 
         {/* Hero Section */}
         <div className="bg-gradient-to-br from-emerald-500 via-green-500 to-teal-600 text-white text-center py-10 px-4">
-          <span className="material-symbols-outlined text-6xl mb-2 block">forest</span>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-2">Tỉnh Cà Mau</h1>
+          <span className="material-symbols-outlined text-6xl mb-2 block">apartment</span>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-2">Thủ Đô Hà Nội</h1>
           <p className="text-lg text-emerald-100">Sáp nhập từ: <strong className="text-white">{T.sapNhap}</strong></p>
         </div>
 
         {/* Image */}
         <div className="max-w-4xl mx-auto px-4 -mt-6">
-          <img src="/images/ca-mau-province.png" alt="Tỉnh Cà Mau" className="w-full rounded-2xl shadow-xl border-4 border-white object-cover" style={{ maxHeight: 500 }} />
+          <img src="/images/h----g----m.jpg" alt="Thủ Đô Hà Nội" className="w-full rounded-2xl shadow-xl border-4 border-white object-cover" style={{ maxHeight: 500 }} />
         </div>
 
         {/* Info Cards */}

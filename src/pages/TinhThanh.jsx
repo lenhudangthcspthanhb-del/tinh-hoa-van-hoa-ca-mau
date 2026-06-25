@@ -129,7 +129,7 @@ export default function TinhThanh() {
             {filtered.map(p => {
               const isTP = p.loai === 'thanh-pho'
               const tongDV = Number(p.phuong || 0) + Number(p.xa || 0) + Number(p.dkhu || 0)
-              const link = p.ten === 'Cà Mau' ? '/tinh-thanh/ca-mau' : null
+              const link = p.ten === 'Cà Mau' ? '/tinh-thanh/ca-mau' : p.ten === 'Hà Nội' ? '/tinh-thanh/ha-noi' : null
               const Wrapper = link ? Link : 'div'
               const wrapperProps = link ? { to: link } : {}
               return (
