@@ -47,8 +47,8 @@ export default function DiaDiem() {
                 <div className="absolute bottom-0 left-0 p-8 w-full">
                   <span className="inline-block bg-orange-500/80 text-white text-xs font-bold px-2 py-1 rounded-md mb-2">Bí Ẩn &amp; Hùng Vĩ</span>
                   <h3 className="text-white text-3xl font-bold mb-2">Mũi Cà Mau</h3>
-                  <p className="text-green-500 text-base opacity-90 hidden md:block max-w-lg">Cực Nam Tổ quốc, nơi duy nhất trên đất liền Việt Nam có thể ngắm mặt trời mọc ở biển Đông và lặn ở biển Tây.</p>
-                  <div className="mt-3 inline-flex items-center gap-1 text-primary text-sm font-bold group-hover:gap-2 transition-all">
+                  <p className="text-green-500 text-sm mt-1">Cực Nam Tổ quốc, nơi duy nhất trên đất liền Việt Nam có thể ngắm mặt trời mọc ở biển Đông và lặn ở biển Tây.</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-yellow-300 text-sm font-bold group-hover:gap-2 transition-all">
                     Xem chi tiết <span className="material-symbols-outlined text-base">arrow_forward</span>
                   </div>
                 </div>
@@ -60,8 +60,8 @@ export default function DiaDiem() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-6">
                   <h3 className="text-white text-2xl font-bold mb-1">Vườn Quốc gia U Minh Hạ</h3>
-                  <p className="text-green-500 text-base opacity-80">Tăng cường bảo tồn đa dạng sinh học</p>
-                  <div className="mt-2 inline-flex items-center gap-1 text-primary text-sm font-bold group-hover:gap-2 transition-all">
+                  <p className="text-green-500 text-sm mt-1">Tăng cường bảo tồn đa dạng sinh học</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-yellow-300 text-sm font-bold group-hover:gap-2 transition-all">
                     Xem chi tiết <span className="material-symbols-outlined text-base">arrow_forward</span>
                   </div>
                 </div>
@@ -73,8 +73,8 @@ export default function DiaDiem() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-6">
                   <h3 className="text-white text-2xl font-bold mb-1">Hòn Đá Bạc</h3>
-                  <p className="text-green-500 text-base opacity-80">Khám phá Hòn Đá Bạc - Cụm đảo có niên đại 180 triệu năm.</p>
-                  <div className="mt-2 inline-flex items-center gap-1 text-primary text-sm font-bold group-hover:gap-2 transition-all">
+                  <p className="text-green-500 text-sm mt-1">Khám phá Hòn Đá Bạc - Cụm đảo có niên đại 180 triệu năm.</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-yellow-300 text-sm font-bold group-hover:gap-2 transition-all">
                     Xem chi tiết <span className="material-symbols-outlined text-base">arrow_forward</span>
                   </div>
                 </div>
@@ -87,7 +87,10 @@ export default function DiaDiem() {
                 <div className="absolute bottom-0 left-0 p-8 w-full">
                   <span className="inline-block bg-orange-500/80 text-white text-xs font-bold px-2 py-1 rounded-md mb-2">Năng lượng xanh</span>
                   <h3 className="text-white text-2xl font-bold mb-2">Khu du lịch sinh thái điện gió Hòa Bình 1</h3>
-                  <p className="text-green-500 text-base opacity-90 hidden md:block max-w-lg">Trải nghiệm khung cảnh hàng chục tuabin gió khổng lồ sừng sững giữa biển trời bao la — điểm check-in ấn tượng bậc nhất vùng Bạc Liêu.</p>
+                  <p className="text-green-500 text-sm mt-1">Trải nghiệm khung cảnh hàng chục tuabin gió khổng lồ sừng sững giữa biển trời bao la — điểm check-in ấn tượng bậc nhất vùng Bạc Liêu.</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-yellow-300 text-sm font-bold group-hover:gap-2 transition-all">
+                    Xem chi tiết <span className="material-symbols-outlined text-base">arrow_forward</span>
+                  </div>
                 </div>
               </div>
 
@@ -97,8 +100,8 @@ export default function DiaDiem() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-6">
                   <h3 className="text-white text-2xl font-bold mb-1">Chợ Nổi Cà Mau</h3>
-                  <p className="text-green-400 text-base opacity-80">Văn hóa giao thương sông nước độc đáo của miền Tây Nam Bộ.</p>
-                  <div className="mt-2 inline-flex items-center gap-1 text-primary text-sm font-bold group-hover:gap-2 transition-all">
+                  <p className="text-green-500 text-sm mt-1">Văn hóa giao thương sông nước độc đáo của miền Tây Nam Bộ.</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-yellow-300 text-sm font-bold group-hover:gap-2 transition-all">
                     Xem chi tiết <span className="material-symbols-outlined text-base">arrow_forward</span>
                   </div>
                 </div>
@@ -110,7 +113,10 @@ export default function DiaDiem() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-6">
                   <h3 className="text-white text-2xl font-bold mb-1">Vườn nhãn cổ Bạc Liêu</h3>
-                  <p className="text-green-500 text-base opacity-80">Vườn nhãn trăm tuổi xanh mát, nơi lưu giữ nét duyên dáng yên bình của xứ Bạc Liêu.</p>
+                  <p className="text-green-500 text-sm mt-1">Vườn nhãn trăm tuổi xanh mát, nơi lưu giữ nét duyên dáng yên bình của xứ Bạc Liêu.</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-yellow-300 text-sm font-bold group-hover:gap-2 transition-all">
+                    Xem chi tiết <span className="material-symbols-outlined text-base">arrow_forward</span>
+                  </div>
                 </div>
               </div>
 
@@ -120,23 +126,35 @@ export default function DiaDiem() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-6">
                   <h3 className="text-white text-2xl font-bold mb-1">Vườn chim Bạc Liêu</h3>
-                  <p className="text-green-500 text-base opacity-80">Vùng đất ngập nước là ngôi nhà của hàng nghìn loài chim quý hiếm, thiên đường của những người yêu thiên nhiên.</p>
+                  <p className="text-green-500 text-sm mt-1">Vùng đất ngập nước là ngôi nhà của hàng nghìn loài chim quý hiếm, thiên đường của những người yêu thiên nhiên.</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-yellow-300 text-sm font-bold group-hover:gap-2 transition-all">
+                    Xem chi tiết <span className="material-symbols-outlined text-base">arrow_forward</span>
+                  </div>
                 </div>
+
               </div>
               {/* Chùa Monivongsa */}
-              <div className="relative rounded-xl overflow-hidden group">
-                <img alt="Chùa Monivongsa" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://mia.vn/media/uploads/blog-du-lich/chua-monivongsa-bopharam-ngoi-chua-khmer-doc-dao-cua-phat-giao-nam-tong-01-1663768729.jpg" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+              <Link to="/di-tich/chua-monivongsa-bopharam" className="block relative rounded-xl overflow-hidden group h-full min-h-[200px]">
+                <img
+                  alt="Chùa Monivongsa Bopharam"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="https://dltm-cdn.vnptit3.vn/resources/portal/Images/CMU/adminportal/1/hinhanh_1124_x_562_px_11_955444714.png"
+                />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(8,16,5,0.9) 0%, rgba(8,16,5,0) 60%)' }}></div>
                 <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-white text-2xl font-bold mb-1">Chùa Monivongsa</h3>
-                  <p className="text-green-500 text-base opacity-80">Chùa Monivongsa Bopharam, ngôi chùa Khmer độc đáo của Phật giáo Nam tông.</p>
+
+                  <h3 className="text-white text-xl font-bold">Chùa Monivongsa Bopharam</h3>
+                  <p className="text-green-500 text-sm mt-1">Ngôi chùa Khmer lớn nhất trung tâm TP. Cà Mau với kiến trúc Angkor rực rỡ.</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-yellow-300 text-sm font-bold group-hover:gap-2 transition-all">
+                    Xem chi tiết <span className="material-symbols-outlined text-base">arrow_forward</span>
+                  </div>
                 </div>
-              </div>
+              </Link>
 
             </div>
           </div>
         </section>
-      </main>
+      </main >
       <Footer />
     </>
   )

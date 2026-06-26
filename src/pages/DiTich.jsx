@@ -39,24 +39,22 @@ export default function DiTich() {
           {/* Feature: Khu tưởng niệm Bác Hồ + Chùa Monivongsa */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
             <article className="md:col-span-8 relative rounded-xl overflow-hidden group min-h-[400px]">
-
-              <img
-                alt="Khu tưởng niệm Bác Hồ"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="https://mia.vn/media/uploads/blog-du-lich/den-khu-tuong-niem-chu-tich-ho-chi-minh-bay-to-long-thanh-kinh-01-1663529168.jpeg"
-              />
-              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(8,16,5,0.9) 0%, rgba(8,16,5,0) 60%)' }}></div>
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <span className="inline-block bg-orange-500/80 text-white text-xs font-bold px-2 py-1 rounded-md mb-2">Di tích quốc gia</span>
-                <h2 className="text-white text-3xl md:text-5xl font-extrabold mb-3">Khu tưởng niệm Bác Hồ</h2>
-                <p className="text-green-500 text-base mb-6 max-w-2xl">
-                  Nơi thiêng liêng thể hiện lòng tôn kính của nhân dân Cà Mau đối với vị lãnh tụ vĩ đại. Công trình mang đậm bản sắc văn hóa dân tộc giữa không gian xanh mát.
-                </p>
-                <div className="flex items-center gap-2 text-white text-sm">
-                  <span className="material-symbols-outlined text-primary text-base">location_on</span>
-                  Phường An Xuyên, tỉnh Cà Mau
+              <Link to="/di-tich/khu-tuong-niem-BH-CM" className="block relative rounded-xl overflow-hidden group h-full min-h-[400px]">
+                <img
+                  alt="Chùa Monivongsa Bopharam"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="/images/khuluuniemchutichhochiminhcamau1_244113314.jpg"
+                />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(8,16,5,0.9) 0%, rgba(8,16,5,0) 60%)' }}></div>
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <span className="inline-block bg-orange-500/80 text-white text-xs font-bold px-2 py-1 rounded-md mb-2">Di tích quốc gia</span>
+                  <h2 className="text-white text-3xl md:text-5xl font-extrabold mb-3">Khu tưởng niệm Bác Hồ</h2>
+                  <div className="flex items-center gap-2 text-white text-sm">
+                    <span className="material-symbols-outlined text-primary text-base">location_on</span>
+                    Phường An Xuyên, tỉnh Cà Mau
+                  </div>
                 </div>
-              </div>
+              </Link>
             </article>
             <div className="md:col-span-4">
               <Link to="/di-tich/chua-monivongsa-bopharam" className="block relative rounded-xl overflow-hidden group h-full min-h-[400px]">
@@ -94,7 +92,7 @@ export default function DiTich() {
                   </li>
                   <li className="flex items-center gap-3 text-sm text-white">
                     <span className="material-symbols-outlined text-primary text-base">location_on</span>
-                    <span><strong className="text-[#14532d]">Địa chỉ:</strong> TP. Cà Mau, tỉnh Cà Mau</span>
+                    <span><strong className="text-[#14532d]">Địa chỉ:</strong> Phường An Xuyên, tỉnh Cà Mau</span>
                   </li>
                   <li className="flex items-start gap-3 text-sm text-white">
                     <span className="material-symbols-outlined text-primary text-base mt-0.5">info</span>
@@ -103,11 +101,13 @@ export default function DiTich() {
                 </ul>
               </div>
               <div className="relative rounded-lg overflow-hidden h-80">
-                <img
-                  alt="Nhà dây thép"
-                  className="w-full h-full object-cover"
-                  src="https://mia.vn/media/uploads/blog-du-lich/di-tich-lich-su-quoc-gia-nha-day-thep-dau-moi-lien-lac-thoi-khang-chien-05-1663156724.jpeg"
-                />
+                <Link to="/di-tich/Nha-day-thep" className="block relative rounded-xl overflow-hidden group h-full min-h-[400px]">
+                  <img
+                    alt="Nhà dây thép"
+                    className="w-full h-full object-cover"
+                    src="/images/nha-day-thep.jpeg"
+                  />
+                </Link>
               </div>
             </div>
           </section>
@@ -243,8 +243,8 @@ export default function DiTich() {
             </div>
           </div>
 
-        </div>
-      </main>
+        </div >
+      </main >
       <Footer />
     </>
   )
