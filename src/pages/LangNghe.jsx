@@ -34,21 +34,18 @@ export default function LangNghe() {
         <section className="max-w-[1200px] mx-auto px-6 mb-20">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6" style={{ gridAutoRows: '400px' }}>
             {/* Tan Duyet */}
-            <div className="md:col-span-8 rounded-xl overflow-hidden relative group border border-green-100 shadow-sm">
-              <img
-                alt="Mat weaving"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="https://cvdvn.net/wp-content/uploads/2020/12/6a744-chieu_ca_mau.jpg"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f1a0c] via-[#0f1a0c]/40 to-transparent"></div>
+            <Link to="/lang-nghe/Nghe-det-chieu" className="md:col-span-2 md:row-span-2 relative rounded-xl overflow-hidden group block">
+              <img alt="Nghe det chieu" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                src="images/nghe det chieu.jpg" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 w-full">
-                <h2 className="text-white text-2xl md:text-5xl font-extrabold mb-2">Nghề dệt chiếu Tân Duyệt</h2>
-                <p className="text-green-500 text-base mb-4 max-w-xl">
-                  Từng sợi lác được nhuộm màu rực rỡ, đan xen khéo léo tạo nên những manh chiếu bền bỉ, mang đậm nét văn hóa sinh hoạt của người dân Nam Bộ.
-                </p>
-
+                <h3 className="text-white text-3xl font-bold mb-2">Nghề dệt chiếu Tân Duyệt</h3>
+                <p className="text-green-500 text-sm mt-1">Từng sợi lác được nhuộm màu rực rỡ, đan xen khéo léo tạo nên những manh chiếu bền bỉ, mang đậm nét văn hóa sinh hoạt của người dân Nam Bộ.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-yellow-300 text-sm font-bold group-hover:gap-2 transition-all">
+                  Xem chi tiết <span className="material-symbols-outlined text-base">arrow_forward</span>
+                </div>
               </div>
-            </div>
+            </Link>
 
             {/* U Minh Honey */}
             <div className="md:col-span-4 rounded-xl overflow-hidden relative group border border-green-100 shadow-sm bg-[#f0fdf4]">

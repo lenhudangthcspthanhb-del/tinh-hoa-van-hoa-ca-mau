@@ -19,6 +19,7 @@ import TinhCaMau from './pages/TinhCaMau'
 import ThanhPhoHaNoi from './pages/TPHaNoi'
 import KhutuongniemBH from './pages/KhutuongniemBH_CM'
 import Nhadaythep from './pages/Nhadaythep'
+import Nghedetchieu from './pages/Nghedetchieu'
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/tinh-thanh/ha-noi" element={<ThanhPhoHaNoi />} />
         <Route path="/di-tich/khu-tuong-niem-BH-CM" element={<KhutuongniemBH />} />
         <Route path="/di-tich/Nha-day-thep" element={<Nhadaythep />} />
+        <Route path="/lang-nghe/Nghe-det-chieu" element={<Nghedetchieu />} />
       </Routes>
     </BrowserRouter>
   )
